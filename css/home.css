@@ -313,10 +313,25 @@
 
 .home-svc-card__tag {
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    color: var(--clr-text-sec);
+    font-size: 0.8rem;
+    color: var(--clr-primary);
+    background: rgba(75, 46, 43, 0.05);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
     margin-bottom: 0.3rem;
+    margin-right: 0.3rem;
     line-height: 1.5;
+    font-weight: 600;
+}
+
+.home-svc-card__details {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: var(--clr-text-sec);
+    line-height: 1.6;
+    margin-top: 1rem;
+    opacity: 0.85;
 }
 
 /* ============================================================
@@ -437,6 +452,46 @@
 
 .home-wood-card--maple .home-wood-card__sub {
     color: rgba(58, 32, 0, 0.65);
+}
+
+.home-wood-meter {
+    width: 100%;
+    margin-top: 0.8rem;
+    text-align: left;
+}
+
+.home-wood-meter span {
+    display: block;
+    font-family: var(--font-subheading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.home-wood-card--maple .home-wood-meter span {
+    color: rgba(58, 32, 0, 0.7);
+}
+
+.meter-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.home-wood-card--maple .meter-bar {
+    background: rgba(0,0,0,0.1);
+}
+
+.meter-bar .fill {
+    height: 100%;
+    background: var(--clr-amber);
+    box-shadow: 0 0 10px rgba(255, 191, 0, 0.4);
+    border-radius: 10px;
 }
 
 /* ============================================================

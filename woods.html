@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <title>Select Your Tonewoods | Artisan Guitars</title>
     <meta name="description" content="Explore our selection of premium tonewoods, each chosen to bring out the best in your custom guitar.">
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
@@ -70,10 +71,13 @@
             </div>
         </section>
 
-        <!-- =========== 2. OUR EXPERTISE / WOODS GRID =========== -->
+        <!-- =========== 2. THE WOOD VAULT / EXPERTISE =========== -->
         <section class="woods-vault">
             <div class="container">
-                <h2 class="woods-section-title">Our Expertise</h2>
+                <div class="woods-vault__header" style="text-align: center; max-width: 750px; margin: 0 auto 3rem;">
+                    <h2 class="woods-section-title">Our Expertise</h2>
+                    <p class="woods-section-desc" style="font-family: var(--font-subheading); color: var(--clr-text-sec); font-size: 1.1rem; line-height: 1.6; margin-top: 1rem;">Experience the science of tone. We select only the highest density, master-grade tonewoods to ensure every instrument we craft possesses a unique and resonant soul.</p>
+                </div>
                 
                 <div class="woods-grid">
                     <!-- Mahogany -->
@@ -81,11 +85,15 @@
                         <div class="wood-card__texture wood-card__texture--mahogany">
                             <h3 class="wood-card__name">Mahogany</h3>
                             <div class="wood-card__tone">Warm &amp; Rich</div>
-                            <div class="wood-card__sub">Vintage Warmth</div>
+                            <div class="wood-card__sub">Vintage Mid-Range</div>
                         </div>
                         <div class="wood-card__content">
                             <div class="wood-card__best">Best for: Blues, Rock, Jazz</div>
-                            <a href="#" class="wood-card__btn wood-card__btn--brown">Learn More</a>
+                            <ul class="wood-specs">
+                                <li><strong>Attack:</strong> Soft / Compressed</li>
+                                <li><strong>Sustain:</strong> High / Enduring</li>
+                                <li><strong>Frequency:</strong> Strong low-mid bias</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -94,11 +102,15 @@
                         <div class="wood-card__texture wood-card__texture--maple">
                             <h3 class="wood-card__name">Maple</h3>
                             <div class="wood-card__tone">Bright &amp; Clear</div>
-                            <div class="wood-card__sub">Crisp &amp; Articulate</div>
+                            <div class="wood-card__sub">High-Velocity Attack</div>
                         </div>
                         <div class="wood-card__content">
-                            <div class="wood-card__best">Best for: Rock, Pop, Modern Styles</div>
-                            <a href="#" class="wood-card__btn">Learn More &nbsp; <i class="ph ph-caret-right"></i></a>
+                            <div class="wood-card__best">Best for: Pop, Metal, Modern Styles</div>
+                            <ul class="wood-specs">
+                                <li><strong>Attack:</strong> Immediate / Sharp</li>
+                                <li><strong>Sustain:</strong> Moderate / Defined</li>
+                                <li><strong>Frequency:</strong> Crystal-clear highs</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -107,11 +119,15 @@
                         <div class="wood-card__texture wood-card__texture--rosewood">
                             <h3 class="wood-card__name">Rosewood</h3>
                             <div class="wood-card__tone">Deep &amp; Resonant</div>
-                            <div class="wood-card__sub">Smooth &amp; Balanced</div>
+                            <div class="wood-card__sub">Full-Spectrum Balance</div>
                         </div>
                         <div class="wood-card__content">
-                            <div class="wood-card__best">Best for: Fingerstyle, Acoustic Versatility</div>
-                            <a href="#" class="wood-card__btn">Learn More &nbsp; <i class="ph ph-caret-right"></i></a>
+                            <div class="wood-card__best">Best for: Fingerstyle, Versatility</div>
+                            <ul class="wood-specs">
+                                <li><strong>Attack:</strong> Balanced / Round</li>
+                                <li><strong>Sustain:</strong> Very High</li>
+                                <li><strong>Frequency:</strong> Wide-band scoop</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -120,11 +136,15 @@
                         <div class="wood-card__texture wood-card__texture--ebony">
                             <h3 class="wood-card__name">Ebony</h3>
                             <div class="wood-card__tone">Dark &amp; Focused</div>
-                            <div class="wood-card__sub">Ideal for Modern Styles</div>
+                            <div class="wood-card__sub">Extreme Sonic Clarity</div>
                         </div>
                         <div class="wood-card__content">
-                            <div class="wood-card__best">Best for: Hard Rock, Metal, Clear Attack</div>
-                            <a href="#" class="wood-card__btn">Learn More &nbsp; <i class="ph ph-caret-right"></i></a>
+                            <div class="wood-card__best">Best for: Technical Playing, Metal</div>
+                            <ul class="wood-specs">
+                                <li><strong>Attack:</strong> Snappy / Percussive</li>
+                                <li><strong>Sustain:</strong> Moderate</li>
+                                <li><strong>Frequency:</strong> High-mid emphasis</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -139,16 +159,16 @@
                         <h2 class="woods-about__title">About Our Tonewoods</h2>
                         <div class="woods-about__subtitle">Only the Finest, Carefully Selected Materials</div>
                         
-                        <p class="woods-text">We source our tonewoods from the best suppliers around the world, ensuring exceptional quality and sustainability. Each piece is carefully handpicked to guarantee optimal tone and aesthetic beauty in every guitar we craft.</p>
+                        <p class="woods-text">Every billet of wood in our vault has been hand-selected for its specific gravity and cellular structure. We source only the top 1% of FSC-certified tonewoods, which are then air-dried in our climate-controlled NY facility for a minimum of 5 years to ensure absolute stability and peak resonance before they ever meet a blade.</p>
                         
                         <div class="woods-about__features">
                             <div class="woods-feature">
-                                <div class="woods-feature__title"><i class="ph ph-leaf"></i> Sustainably Sourced</div>
-                                <p>Ethically harvested tonewoods with a strict commitment to environmental responsibility.</p>
+                                <div class="woods-feature__title"><i class="ph-fill ph-leaf"></i> FSC Master-Grade Selection</div>
+                                <p>We strictly adhere to CITES regulations and international sustainability standards, ensuring the ethical harvest of rare species like African Ebony and Brazilian Rosewood.</p>
                             </div>
                             <div class="woods-feature">
-                                <div class="woods-feature__title"><i class="ph ph-medal"></i> Premium Quality</div>
-                                <p>Each piece is inspected for optimal tonal properties, grain quality, and appearance.</p>
+                                <div class="woods-feature__title"><i class="ph-fill ph-wind"></i> 5+ Year Seasoning Program</div>
+                                <p>Our wood is never kiln-dried to "speed up" production. We rely on the natural aging of resins to create the crystalline top end that defines an Artisan instrument.</p>
                             </div>
                         </div>
                         

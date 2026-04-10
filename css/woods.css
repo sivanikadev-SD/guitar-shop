@@ -256,8 +256,36 @@
 
 .wood-card__best {
     font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--clr-border);
+    width: 100%;
+}
+
+.wood-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.wood-specs li {
+    font-size: 0.8rem;
     color: var(--clr-text-sec);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wood-specs li strong {
+    color: var(--clr-text);
+    font-family: var(--font-subheading);
 }
 
 .wood-card__btn {

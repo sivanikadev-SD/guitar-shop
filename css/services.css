@@ -426,7 +426,73 @@
 }
 
 /* ============================================================
-   DARK MODE OVERRIDES
+   5. THE BENCH PROCESS
+   ============================================================ */
+.srv-process {
+    background: var(--clr-surface-offset);
+    padding: 6rem 0;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.process-step {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.process-step:hover {
+    border-color: var(--clr-primary);
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
+}
+
+.process-step__number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.process-step__content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--clr-text);
+    margin-bottom: 0.8rem;
+}
+
+.process-step__content p {
+    font-size: 0.95rem;
+    color: var(--clr-text-sec);
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .process-step {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .process-step:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* ============================================================
+   6. DARK MODE OVERRIDES
    ============================================================ */
 [data-theme="dark"] .srv-card {
     background: var(--clr-dark-surface);
