@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Artisan Guitars</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('isRTL') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+<body>
+    
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo" style="font-size: 1.2rem;"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="ph ph-guitars"></i> My Builds
+                </a>
+                <a href="dashboard-design.html" class="sidebar-link">
+                    <i class="ph ph-paint-brush"></i> Design Tool
+                </a>
+                <a href="dashboard-materials.html" class="sidebar-link">
+                    <i class="ph ph-tree-evergreen"></i> Materials
+                </a>
+                <a href="dashboard-orders.html" class="sidebar-link">
+                    <i class="ph ph-receipt"></i> Orders
+                </a>
+                <a href="dashboard-messages.html" class="sidebar-link">
+                    <i class="ph ph-chat-text"></i> Messages <span style="background:var(--clr-primary);color:#fff;padding:2px 6px;border-radius:10px;font-size:0.75rem;margin-left:auto;">2</span>
+                </a>
+                <a href="dashboard-settings.html" class="sidebar-link active">
+                    <i class="ph ph-gear"></i> Settings
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer" style="display:flex; flex-direction:column; gap:0.5rem;">
+                <button class="theme-toggle" id="themeToggle" style="width:100%; border-radius:var(--radius-sm); border:1px solid var(--clr-border); justify-content:flex-start; gap:0.5rem; padding-left:1rem; border:none; background:var(--clr-primary-light);">
+                    <i class="ph ph-moon"></i> Dark Mode
+                </button>
+                <button class="logout-btn" style="width:100%; border-radius:var(--radius-sm); border:1px solid var(--clr-border); justify-content:flex-start; gap:0.5rem; padding-left:1rem; border:none; background:transparent; color:var(--clr-text-sec); font-weight:500; font-family:var(--font-body); cursor:pointer; display:flex; align-items:center; padding:0.8rem 1.5rem; transition:var(--transition);">
+                    <i class="ph ph-sign-out" style="font-size:1.2rem;"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Mobile Top Bar -->
+            <div class="dash-mobile-top">
+                <button class="dash-menu-toggle" aria-label="Open sidebar"><i class="ph ph-list"></i></button>
+                <div class="brand-logo" style="margin:0; font-size:1.1rem;"><i class="ph-fill ph-guitar"></i> <span style="display:none;">Artisan Guitars</span></div>
+                <div class="avatar" style="width:36px; height:36px; font-size:0.9rem;">JD</div>
+            </div>
+
+            <header class="dashboard-header">
+                <div>
+                    <h2>Portal Configuration</h2>
+                    <p style="margin:0;">Manage your security, shipping coordinates, and notification pulses.</p>
+                </div>
+                <div class="user-profile-menu desktop-only">
+                    <a href="index.html" class="btn btn-outline" style="padding:0.5rem 1rem;">Back to Site</a>
+                    <div class="avatar">JD</div>
+                </div>
+            </header>
+
+            <div class="grid grid-2" style="gap: 2rem;">
+                
+                <!-- Personal Specs -->
+                <div class="tracker-card" style="margin: 0;">
+                    <h3 style="margin-bottom: 2rem;">Account Owner Details</h3>
+                    <form>
+                        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="form-group" style="flex: 1;">
+                                <label style="display:block; margin-bottom:0.5rem; font-weight:600;">First Name</label>
+                                <input type="text" value="John" class="form-control" style="width: 100%; padding: 1rem; border: 1px solid var(--clr-border); background: var(--clr-bg); color: var(--clr-text); border-radius: var(--radius-sm);">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Last Name</label>
+                                <input type="text" value="Doe" class="form-control" style="width: 100%; padding: 1rem; border: 1px solid var(--clr-border); background: var(--clr-bg); color: var(--clr-text); border-radius: var(--radius-sm);">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Secure Email (Portal Login)</label>
+                            <input type="email" value="john.doe@example.com" class="form-control" style="width: 100%; padding: 1rem; border: 1px solid var(--clr-border); background: var(--clr-bg); color: var(--clr-text); border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Password Overwrite</label>
+                            <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" class="form-control" style="width: 100%; padding: 1rem; border: 1px solid var(--clr-border); background: var(--clr-bg); color: var(--clr-text); border-radius: var(--radius-sm);">
+                        </div>
+                        <button type="button" class="btn btn-outline" style="width: 100%; padding: 1rem;">Apply Account Changes</button>
+                    </form>
+                </div>
+
+                <!-- Shipping Details -->
+                <div class="tracker-card" style="margin: 0;">
+                    <h3 style="margin-bottom: 2rem;">Global Shipping Address</h3>
+                    <p style="font-size: 0.9rem; color: var(--clr-text-sec); margin-bottom: 1.5rem;">This address directly governs where your custom ATA flight case will be deployed once the build is authorized for transit. Ensure adult signature is possible.</p>
+                    <form>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Street Coordinate Line 1</label>
+                            <input type="text" value="1287 Harmonic Way" class="form-control" style="width: 100%; padding: 1rem; border: 1px solid var(--clr-border); background: var(--clr-bg); color: var(--clr-text); border-radius: var(--radius-sm);">
+                        </div>
+                        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="form-group" style="flex: 2;">
+                                <label style="display:block; margin-bottom:0.5rem; font-weight:600;">City</label>
+                                <input type="text" value="Nashville" class="form-control" style="width: 100%; padding: 1rem; border: 1px solid var(--clr-border); background: var(--clr-bg); color: var(--clr-text); border-radius: var(--radius-sm);">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label style="display:block; margin-bottom:0.5rem; font-weight:600;">State / Code</label>
+                                <input type="text" value="TN 37201" class="form-control" style="width: 100%; padding: 1rem; border: 1px solid var(--clr-border); background: var(--clr-bg); color: var(--clr-text); border-radius: var(--radius-sm);">
+                            </div>
+                        </div>
+                        <hr style="border: 0; border-top: 1px solid var(--clr-border); margin: 2rem 0;">
+                        <h4 style="margin-bottom: 1rem;">Alert Preferences</h4>
+                        <label style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; cursor: pointer;">
+                            <input type="checkbox" checked style="width: 1.2rem; height: 1.2rem; accent-color: var(--clr-primary);"> Weekly build photo updates via Email
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.8rem; cursor: pointer; margin-bottom: 2rem;">
+                            <input type="checkbox" style="width: 1.2rem; height: 1.2rem; accent-color: var(--clr-primary);"> SMS text alerts for direct Luthier messages
+                        </label>
+                        <button type="button" class="btn btn-primary" style="width: 100%; padding: 1rem;">Lock Logistics Profile</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+

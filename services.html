@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Artisan Guitars</title>
+    <meta name="description" content="Specializing in custom guitar builds, restoration, hardware upgrades, and tone optimization. Let us make your dream guitar a reality.">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('isRTL') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+<body>
+    <!-- =========== NAVBAR =========== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            <nav class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)">Home <i class="ph ph-caret-down"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="woods.html">Woods</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html" class="nav-dashboard">Dashboard</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="rtl-toggle" aria-label="Toggle RTL" style="background:none;border:1px solid var(--clr-border);border-radius:var(--radius-sm);padding:0.4rem 0.6rem;cursor:pointer;color:var(--clr-text);font-family:var(--font-subheading);font-weight:bold;font-size:0.8rem;">RTL</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                <div class="cta-group">
+                    <a href="login.html" class="btn btn-outline" style="border-color:transparent;">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== 1. SERVICES HERO =========== -->
+        <section class="srv-hero">
+            <div class="srv-hero__bg">
+                <img src="assets/services_hero_bg_1775743385541.png" alt="Luthier Services" class="srv-hero__image">
+                <div class="srv-hero__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="srv-hero__content">
+                    <h1 class="srv-hero__title">Our Expert Luthier Services</h1>
+                    <p class="srv-hero__subtitle">Crafting the Perfect Sound, Tailored Just for You</p>
+                    <div class="srv-hero__cta">
+                        <a href="signup.html" class="btn btn-primary">Start Custom Build</a>
+                        <a href="portfolio.html" class="btn srv-hero__outline-btn">Explore Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 2. OUR EXPERTISE =========== -->
+        <section class="srv-expertise">
+            <div class="container">
+                <div class="srv-expertise__header">
+                    <h2 class="srv-expertise__title">Our Expertise</h2>
+                    <p class="srv-expertise__desc">Specializing in custom builds, restoration, hardware upgrades, and tone optimization.<br>Let us make your dream guitar a reality.</p>
+                </div>
+
+                <div class="srv-expertise__grid">
+                    <!-- Card 1 -->
+                    <div class="srv-card">
+                        <img src="assets/service_card_1_1775743404800.png" alt="Custom Guitar Builds" class="srv-card__image">
+                        <div class="srv-card__content">
+                            <h3 class="srv-card__title">Custom Guitar Builds</h3>
+                            <p class="srv-card__text">Create a custom guitar tailored to your sound and style, using premium woods and components.</p>
+                            <a href="#build" class="srv-card__btn srv-card__btn--primary">Start Your Build</a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="srv-card">
+                        <img src="assets/service_card_2_1775743424357.png" alt="Repair &amp; Restoration" class="srv-card__image">
+                        <div class="srv-card__content">
+                            <h3 class="srv-card__title">Repair &amp; Restoration</h3>
+                            <p class="srv-card__text">Breathe new life into your cherished instruments with expert repair and restoration services.</p>
+                            <a href="#repair" class="srv-card__btn">Learn More &nbsp; <i class="ph ph-caret-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="srv-card">
+                        <img src="assets/service_card_3_1775743513682.png" alt="Hardware Upgrades" class="srv-card__image">
+                        <div class="srv-card__content">
+                            <h3 class="srv-card__title">Hardware Upgrades</h3>
+                            <p class="srv-card__text">Enhance your guitar with high-end hardware, from tuners and bridges to electronics.</p>
+                            <a href="#hardware" class="srv-card__btn">Learn More &nbsp; <i class="ph ph-caret-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="srv-card">
+                        <img src="assets/service_card_4_1775743531524.png" alt="Tone Optimization" class="srv-card__image">
+                        <div class="srv-card__content">
+                            <h3 class="srv-card__title">Tone Optimization</h3>
+                            <p class="srv-card__text">Fine-tune your guitar's sound to achieve the perfect tone and maximum playability.</p>
+                            <a href="#tone" class="srv-card__btn">Learn More &nbsp; <i class="ph ph-caret-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 3. CUSTOM GUITAR BUILDS =========== -->
+        <section class="srv-builds" id="build">
+            <div class="container">
+                <div class="srv-builds__grid">
+                    <div class="srv-builds__content">
+                        <h2 class="srv-section-title" style="margin-bottom: 0.5rem;">Custom Guitar Builds</h2>
+                        <div class="srv-section-subtitle">Where Passion Meets Precision</div>
+                        
+                        <p class="srv-text">Trust our skilled luthiers to restore your guitar to its former glory. Whether it's a vintage treasure or everyday favorite, we handle grading everything from fretwork to refinishing with the utmost care and attention.</p>
+                        
+                        <ul class="srv-checks">
+                            <li><i class="ph-bold ph-check"></i> Personalized design consultation</li>
+                            <li><i class="ph-bold ph-check"></i> Wide selection of premium tonewoods</li>
+                            <li><i class="ph-bold ph-check"></i> Custom hardware and electronics</li>
+                            <li><i class="ph-bold ph-check"></i> Detailed craftsmanship with regular build updates</li>
+                        </ul>
+                        
+                        <a href="signup.html" class="btn btn-primary btn-large">Start Custom Build</a>
+                    </div>
+                    
+                    <div class="srv-builds__image-wrap">
+                        <img src="assets/services_custom_build_1775743550126.png" alt="Finished Custom Build" class="srv-builds__image">
+                        
+                        <!-- Floating card -->
+                        <div class="srv-float-card">
+                            <h4 class="srv-float-card__title">Features</h4>
+                            <ul class="srv-float-list">
+                                <li>Personalized design consultation</li>
+                                <li>Wide selection of premium tonewoods</li>
+                                <li>Custom hardware and electronics</li>
+                                <li>Detailed craftsmanship with regular build updates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 4. HARDWARE UPGRADES =========== -->
+        <section class="srv-hardware" id="hardware">
+            <div class="container">
+                <div class="srv-hardware__grid">
+                    <div class="srv-hardware__image-wrap">
+                        <img src="assets/services_hardware_1775743635155.png" alt="Hardware Upgrade in process" class="srv-hardware__image">
+                    </div>
+                    
+                    <div class="srv-hardware__content">
+                        <div class="srv-hardware__titleline">
+                            <h2>Hardware Upgrades</h2>
+                        </div>
+                        
+                        <p class="srv-text">Upgrade your guitar with top-quality hardware. For our custom built and preferred touring machine prep, we offer a range of options to elevate your instrument. ---</p>
+                        
+                        <ul class="srv-checks">
+                            <li><i class="ph-bold ph-check"></i> High-end tuning machines</li>
+                            <li><i class="ph-bold ph-check"></i> Premium bridges and saddles</li>
+                            <li><i class="ph-bold ph-check"></i> Custom pickups and electronics</li>
+                            <li><i class="ph-bold ph-check"></i> Specialized nut and fretwork upgrades</li>
+                        </ul>
+                        
+                        <a href="#quote" class="btn btn-primary" style="background: var(--clr-walnut); border-color: var(--clr-walnut);">Receive Upgrades</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =========== 5. CLIENT SUCCESS STORY =========== -->
+        <section class="srv-builds" style="padding: 6rem 0; background: var(--clr-bg);">
+            <div class="container text-center">
+                 <div class="srv-expertise__title" style="justify-content: center;">Client Success Story</div>
+                 <p class="srv-text" style="max-width: 700px; margin: 1rem auto 2rem;">Discover how a professional touring artist transformed their live sound and reliability after receiving a complete hardware overhaul and tone optimization from our specialized bench.</p>
+                 <a href="portfolio.html" class="btn btn-outline btn-large">Read Success Stories</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand-info">
+                    <a href="index.html" class="brand-logo text-white"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                    <p style="margin-top: 1.5rem; color: #a1a1aa; line-height: 1.8;">Where centuries of traditional luthier craftsmanship meet absolute modern portal transparency. Built for the player, by the player.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="about.html">Our Philosophy</a>
+                    <a href="services.html">Luthier Services</a>
+                    <a href="woods.html">The Wood Vault</a>
+                    <a href="portfolio.html">Gallery &amp; Artists</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support Options</h4>
+                    <a href="pricing.html">Pricing Structure</a>
+                    <a href="contact.html">Contact the Bench</a>
+                    <a href="dashboard.html">Client Login</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons" style="margin-top: 1rem;">
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph ph-youtube-logo"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artisan Guitars Workshop. All rights strictly reserved. NY, USA.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- =========== MOBILE DRAWER =========== -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer__overlay"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__header">
+                <a href="index.html" class="mobile-drawer__logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                <button class="mobile-drawer__close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+            </div>
+            <nav class="mobile-drawer__links">
+                <a href="index.html"><i class="ph ph-house"></i> Home</a>
+                <a href="home2.html"><i class="ph ph-house-line"></i> Home 2</a>
+                <a href="about.html"><i class="ph ph-info"></i> About</a>
+                <a href="services.html" class="active"><i class="ph ph-wrench"></i> Services</a>
+                <a href="woods.html"><i class="ph ph-tree-evergreen"></i> Woods</a>
+                <a href="portfolio.html"><i class="ph ph-images"></i> Portfolio</a>
+                <a href="pricing.html"><i class="ph ph-tag"></i> Pricing</a>
+                <a href="contact.html"><i class="ph ph-envelope"></i> Contact</a>
+                <div class="mobile-drawer__divider"></div>
+                <a href="dashboard.html" class="nav-dashboard"><i class="ph ph-layout"></i> Dashboard</a>
+            </nav>
+            <div class="mobile-drawer__footer">
+                <div class="mobile-drawer__auth">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="mobile-drawer__controls">
+                    <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+

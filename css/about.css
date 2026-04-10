@@ -1,0 +1,577 @@
+/* ============================================================
+   ABOUT PAGE — DEDICATED STYLES
+   Artisan Guitars · about.css
+   ============================================================ */
+
+/* ----- Shared section title ----- */
+.about-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.about-section-title--light {
+    color: #fff;
+}
+
+.about-section-title--left {
+    text-align: left;
+}
+
+/* ============================================================
+   1. HERO
+   ============================================================ */
+.about-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.about-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.about-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.55) saturate(1.1);
+}
+
+.about-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 10, 5, 0.8) 0%,
+        rgba(20, 10, 5, 0.4) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+}
+
+.about-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    padding: 2rem;
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.about-hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    letter-spacing: -0.02em;
+}
+
+.about-hero__subtitle {
+    font-family: var(--font-subheading);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: #f5f5f5;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero__desc {
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.about-hero__cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.about-hero__cta .btn {
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    padding: 0.8rem 1.8rem;
+}
+
+.about-hero__outline-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.about-hero__outline-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #fff;
+    color: #fff;
+}
+
+/* ============================================================
+   2. STORY & PHILOSOPHY
+   ============================================================ */
+.about-story {
+    background: var(--clr-surface-offset);
+    padding: 6rem 0;
+}
+
+.about-story__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .about-story__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-story__image-wrap {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4/3;
+}
+
+.about-story__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-story__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-story__title {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 0.5rem;
+}
+
+.about-story__subtitle {
+    font-family: var(--font-subheading);
+    font-size: 1.2rem;
+    color: var(--clr-text-sec);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-story__subtitle::after {
+    content: '';
+    height: 1px;
+    width: 100px;
+    background: var(--clr-primary);
+}
+
+.about-story__text {
+    font-size: 1rem;
+    color: var(--clr-text-sec);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.about-story__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.about-story__badge {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    padding: 0.8rem 1.2rem;
+    font-family: var(--font-subheading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    flex: 1 1 200px;
+}
+
+.about-story__badge i {
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+}
+
+/* Sub-features block */
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+@media (min-width: 900px) {
+    .about-features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-features__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.about-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.about-feature__icon {
+    font-size: 1.8rem;
+    color: var(--clr-primary);
+}
+
+.about-feature__text h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--clr-text);
+}
+
+.about-feature__text p {
+    font-size: 0.95rem;
+    color: var(--clr-text-sec);
+    line-height: 1.6;
+}
+
+.about-features__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ============================================================
+   3. OUR VALUES
+   ============================================================ */
+.about-values {
+    background: var(--clr-bg);
+    padding: 6rem 0;
+}
+
+.about-values__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.about-values__header::before,
+.about-values__header::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    background: var(--clr-border);
+}
+
+.about-values__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .about-values__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.about-value-card {
+    background: var(--clr-surface-offset);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.about-value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.about-value-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about-value-card__content {
+    padding: 2rem 1.5rem;
+}
+
+.about-value-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    margin-bottom: 1rem;
+}
+
+.about-value-card__text {
+    font-size: 0.95rem;
+    color: var(--clr-text-sec);
+    line-height: 1.6;
+}
+
+/* ============================================================
+   4. LUTHIERS
+   ============================================================ */
+.about-luthiers {
+    background: url('../assets/luthier_working.png') center/cover no-repeat;
+    position: relative;
+    padding: 6rem 0;
+    color: #fff;
+}
+
+.about-luthiers::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(20, 10, 5, 0.95), rgba(40, 20, 10, 0.85));
+}
+
+.about-luthiers__inner {
+    position: relative;
+    z-index: 2;
+}
+
+.about-luthiers__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.about-luthiers__header::before,
+.about-luthiers__header::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.about-luthiers__top {
+    display: none; /* we relocate this text into the grid */
+}
+
+.about-luthiers__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (min-width: 900px) {
+    .about-luthiers__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+}
+
+.about-luthier-card {
+    background: #f4ede4;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    color: var(--clr-light-text);
+}
+
+/* Left card — tall, positioned at the top */
+.about-luthier-card:first-child {
+    margin-top: 0;
+}
+
+/* Right column: text on top, card below (offset downward) */
+.about-luthiers__right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 0;
+}
+
+@media (min-width: 900px) {
+    .about-luthiers__right-col {
+        padding-top: 3.5rem; /* push card + text down to create stagger */
+    }
+}
+
+.about-luthiers__right-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-subheading);
+}
+
+.about-luthier-card__image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.about-luthier-card--small .about-luthier-card__image {
+    height: 280px;
+}
+
+.about-luthier-card__content {
+    padding: 1.5rem 2rem;
+}
+
+.about-luthier-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.about-luthier-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--clr-walnut);
+}
+
+.about-luthier-card__role {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--clr-walnut);
+}
+
+.about-luthier-card__badge {
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 0.2rem 0.8rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-family: var(--font-subheading);
+    font-weight: 600;
+}
+
+.about-luthier-card__desc {
+    font-size: 0.9rem;
+    color: rgba(75, 46, 43, 0.8);
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+/* ============================================================
+   DARK MODE OVERRIDES
+   ============================================================ */
+[data-theme="dark"] .about-story__badge {
+    background: var(--clr-dark-surface);
+}
+[data-theme="dark"] .about-luthier-card {
+    background: var(--clr-dark-surface);
+    color: var(--clr-dark-text);
+}
+[data-theme="dark"] .about-luthier-card__title,
+[data-theme="dark"] .about-luthier-card__role {
+    color: var(--clr-primary);
+}
+[data-theme="dark"] .about-luthier-card__badge {
+    border-color: rgba(255,255,255,0.2);
+}
+[data-theme="dark"] .about-luthier-card__desc {
+    color: rgba(255,255,255,0.7);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   RESPONSIVE — 1024px (Laptop)
+   ============================================================ */
+@media (max-width: 1024px) {
+    .about-hero__title { font-size: 3rem; }
+    .about-story__grid { gap: 2rem; }
+    .about-luthiers__grid { gap: 1.5rem; }
+    .about-values__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px (Tablet)
+   ============================================================ */
+@media (max-width: 768px) {
+    .about-hero { min-height: 60vh; }
+    .about-hero__title { font-size: 2.4rem; }
+    .about-hero__subtitle { font-size: 1rem; }
+    .about-hero__cta { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+
+    .about-story { padding: 3rem 0; }
+    .about-story__grid { grid-template-columns: 1fr; }
+    .about-story__image-wrap { order: -1; height: 280px; }
+
+    .about-features { padding: 3rem 0; }
+    .about-features__grid { grid-template-columns: 1fr; }
+
+    .about-values { padding: 3rem 0; }
+    .about-values__grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+    .about-luthiers__grid { grid-template-columns: 1fr; }
+    .about-luthiers__right-col { padding-top: 0; }
+    .about-luthier-card { min-height: auto; }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px (Mobile)
+   ============================================================ */
+@media (max-width: 480px) {
+    .about-hero { padding-top: 70px; }
+    .about-hero__title { font-size: 1.9rem; }
+    .about-hero__badge { font-size: 0.75rem; }
+    .about-hero__cta { flex-direction: column; width: 100%; }
+    .about-hero__cta .btn { width: 100%; justify-content: center; }
+
+    .about-story__subtitle { font-size: 1rem; }
+    .about-story__title { font-size: 1.8rem; }
+    .about-story__badges { flex-direction: column; }
+
+    .about-values__grid { grid-template-columns: 1fr; }
+    .about-value-card { padding: 1.2rem; }
+
+    .about-section-title { font-size: 1.8rem; flex-direction: column; gap: 0.5rem; }
+    .about-section-title::before,
+    .about-section-title::after { width: 40px; }
+
+    .about-luthier-card__image { height: 220px; }
+}

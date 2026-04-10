@@ -1,0 +1,568 @@
+/* css/contact.css */
+
+/* Hero Section */
+.contact-hero {
+    position: relative;
+    padding: 160px 0 160px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../assets/fretboard_work.png'); /* A nice workshop background */
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0.8;
+    z-index: -2;
+}
+
+.contact-hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(38, 22, 18, 0.6) 0%, rgba(38, 22, 18, 0.9) 100%);
+    z-index: -1;
+}
+
+.contact-hero-content {
+    color: #fff;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    color: #fdfbf7;
+    font-family: 'Clash Display', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+
+.contact-hero-content p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: 'Satoshi', sans-serif;
+}
+
+/* Base Light Section for Cards & Form */
+.light-bg-section {
+    background-color: #f4efe8; /* Warm earthy cream */
+    padding: 2rem 0 6rem;
+}
+
+.container-narrow {
+    max-width: 900px;
+}
+
+/* Contact Info Cards */
+.contact-info-section {
+    position: relative;
+    margin-top: -60px; /* Overlap the hero slightly */
+    z-index: 5;
+    padding-bottom: 3rem;
+}
+
+.info-cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.c-info-card {
+    background-color: #fdfbf7;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #2b1f1a;
+    transition: transform 0.3s ease;
+}
+
+.c-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.c-info-card i {
+    font-size: 2.2rem;
+    color: #a85834; /* warm brown */
+    opacity: 0.8;
+}
+
+.c-info-text h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-family: 'Clash Display', sans-serif;
+}
+
+.c-info-text p {
+    font-size: 0.95rem;
+    color: rgba(43, 31, 26, 0.75);
+    line-height: 1.4;
+    margin-bottom: 0;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.business-hours {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: 'Satoshi', sans-serif;
+    color: rgba(43, 31, 26, 0.8);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+.business-hours::before,
+.business-hours::after {
+    content: '';
+    height: 1px;
+    width: 40px;
+    background-color: rgba(43, 31, 26, 0.15);
+}
+
+/* Split Form Section */
+.split-form-wrapper {
+    display: flex;
+    gap: 4rem;
+    align-items: stretch;
+    margin-top: 2rem;
+}
+
+.split-form-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.split-form-content h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #2b1f1a;
+    font-family: 'Clash Display', sans-serif;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(43, 31, 26, 0.15);
+    border-radius: 2px;
+    padding: 1.2rem;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1rem;
+    color: #2b1f1a;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #a85834;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(43, 31, 26, 0.5);
+}
+
+.c-btn-primary {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(135,76,46,1) 0%, rgba(84,43,24,1) 100%);
+    color: #fff;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Satoshi', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.c-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(135,76,46,0.4);
+}
+
+.form-footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(43, 31, 26, 0.8);
+    font-family: 'Satoshi', sans-serif;
+}
+
+.form-footer p {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-footer p i {
+    font-size: 1.1rem;
+    color: #a85834;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    color: rgba(43, 31, 26, 0.7);
+}
+
+.social-icons i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #a85834;
+}
+
+.split-image-container {
+    flex: 1;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    min-height: 400px;
+}
+
+.split-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../assets/hero_guitar.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Dark textured sections (FAQ) */
+.dark-texture-section {
+    position: relative;
+    color: #e6dfd6;
+    background-color: #241812;
+    overflow: hidden;
+    z-index: 1;
+    padding: 5rem 0;
+}
+
+.dark-texture-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../assets/wood_textures.png'); /* grunge texture */
+    background-size: cover;
+    mix-blend-mode: overlay;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-weight: 400;
+    font-family: 'Clash Display', sans-serif;
+}
+
+.section-title::before,
+.section-title::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background-color: rgba(230, 223, 214, 0.3);
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.faq-item {
+    background: rgba(20, 12, 8, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq-item.active {
+    background: #e6dfd6;
+    color: #2b1f1a;
+}
+
+.faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    font-size: 1.05rem;
+    font-family: 'Satoshi', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-item.active .faq-question {
+    color: #2b1f1a;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer-inner {
+    padding: 0 2rem 1.8rem;
+    font-size: 0.95rem;
+    color: rgba(43, 31, 26, 0.85);
+    line-height: 1.6;
+}
+
+/* Custom minimal footer replacing main footer */
+.pricing-footer {
+    background: #110b08;
+    color: #8c837a;
+    padding: 3rem 0 1.5rem;
+    text-align: center;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.p-footer-logo {
+    display: inline-block;
+    width: 36px; height: 36px;
+    border: 1px solid rgba(140, 131, 122, 0.4);
+    border-radius: 50% 50% 10px 10px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.p-footer-logo::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 0; height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #8c837a;
+}
+
+.p-footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.p-footer-nav a {
+    color: #8c837a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.p-footer-nav a:hover {
+    color: #e6dfd6;
+}
+
+.p-footer-nav span {
+    color: rgba(140, 131, 122, 0.2);
+}
+
+.p-footer-contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.p-footer-contacts div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.p-footer-contacts a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Map Section */
+.c-map-section {
+    position: relative;
+}
+
+.c-map-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.c-map-wrapper iframe {
+    display: block;
+    filter: sepia(20%) saturate(0.8);
+}
+
+.c-map-card {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    background: #fdfbf7;
+    padding: 2rem;
+    border-radius: 2px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    min-width: 240px;
+    color: #2b1f1a;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.c-map-card h4 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2b1f1a;
+}
+
+.c-map-card p {
+    font-size: 0.9rem;
+    color: rgba(43, 31, 26, 0.75);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.c-map-directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #a85834;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    font-family: 'Satoshi', sans-serif;
+    text-decoration: none;
+    margin-top: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.c-map-directions-btn:hover {
+    background: #804328;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .info-cards-wrapper { flex-direction: column; }
+    .split-form-wrapper { flex-direction: column; }
+    .split-image-container { min-height: 300px; }
+    .contact-info-section { margin-top: -40px; }
+    .c-map-card {
+        position: static;
+        transform: none;
+        border-radius: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px (Tablet)
+   ============================================================ */
+@media (max-width: 768px) {
+    .contact-hero { padding: 120px 0 100px; }
+    .contact-hero-content h1 { font-size: 2.5rem; }
+    .contact-hero-content p { font-size: 1rem; }
+
+    .light-bg-section { padding: 1.5rem 0 4rem; }
+    .split-form-content h2 { font-size: 1.8rem; }
+
+    .business-hours { flex-direction: column; gap: 0.5rem; }
+    .business-hours::before, .business-hours::after { width: 60px; height: 1px; }
+
+    .section-title { font-size: 1.8rem; gap: 0.8rem; }
+    .faq-question { padding: 1.2rem 1.5rem; font-size: 0.95rem; }
+    .faq-answer-inner { padding: 0 1.5rem 1.5rem; }
+
+    .c-map-wrapper iframe { height: 320px; }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px (Mobile)
+   ============================================================ */
+@media (max-width: 480px) {
+    .contact-hero { padding: 100px 0 80px; }
+    .contact-hero-content h1 { font-size: 1.9rem; }
+    .contact-hero-content p { font-size: 0.9rem; }
+    .contact-info-section { margin-top: -20px; }
+
+    .c-info-card { flex-direction: column; text-align: center; gap: 0.8rem; padding: 1.5rem; }
+    .c-info-card i { font-size: 2rem; }
+
+    .split-form-content h2 { font-size: 1.5rem; }
+    .form-group input, .form-group textarea { padding: 0.9rem; font-size: 0.9rem; }
+
+    .section-title { font-size: 1.4rem; flex-direction: column; }
+    .section-title::before, .section-title::after { width: 40px; }
+    .faq-question { padding: 1rem; font-size: 0.88rem; }
+
+    .c-map-wrapper iframe { height: 260px; }
+    .c-map-card { padding: 1.2rem; }
+    .c-map-card h4 { font-size: 0.95rem; }
+    .c-map-card p { font-size: 0.82rem; }
+    .c-map-directions-btn { width: 100%; justify-content: center; }
+}

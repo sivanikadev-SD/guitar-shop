@@ -1,0 +1,504 @@
+/* ============================================================
+   SERVICES PAGE — DEDICATED STYLES
+   Artisan Guitars · services.css
+   ============================================================ */
+
+/* ----- Shared section title ----- */
+.srv-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.srv-section-subtitle {
+    font-family: var(--font-subheading);
+    font-size: 1.15rem;
+    color: var(--clr-text-sec);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.srv-section-subtitle::after {
+    content: '';
+    height: 1px;
+    width: 80px;
+    background: var(--clr-primary);
+}
+
+.srv-text {
+    font-size: 1rem;
+    color: var(--clr-text-sec);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.srv-checks {
+    list-style: none;
+    margin-bottom: 2.5rem;
+}
+
+.srv-checks li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--clr-text);
+    margin-bottom: 0.8rem;
+}
+
+.srv-checks li i {
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* ============================================================
+   1. HERO
+   ============================================================ */
+.srv-hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.srv-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.srv-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.6) saturate(1.1);
+}
+
+.srv-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 10, 5, 0.85) 0%,
+        rgba(20, 10, 5, 0.4) 60%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+}
+
+.srv-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    padding: 2rem;
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.srv-hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    letter-spacing: -0.02em;
+}
+
+.srv-hero__subtitle {
+    font-family: var(--font-subheading);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.srv-hero__cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.srv-hero__cta .btn {
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    padding: 0.8rem 1.8rem;
+}
+
+.srv-hero__outline-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.srv-hero__outline-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #fff;
+    color: #fff;
+}
+
+/* ============================================================
+   2. OUR EXPERTISE (CARDS)
+   ============================================================ */
+.srv-expertise {
+    background: var(--clr-surface-offset);
+    padding: 6rem 0;
+}
+
+.srv-expertise__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.srv-expertise__title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.srv-expertise__title::before,
+.srv-expertise__title::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background: var(--clr-border);
+}
+
+.srv-expertise__desc {
+    font-family: var(--font-subheading);
+    font-size: 1.1rem;
+    color: var(--clr-text-sec);
+    line-height: 1.6;
+}
+
+.srv-expertise__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 600px) {
+    .srv-expertise__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .srv-expertise__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.srv-card {
+    background: var(--clr-surface);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.srv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--clr-primary);
+}
+
+.srv-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.srv-card__content {
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.srv-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    margin-bottom: 1rem;
+}
+
+.srv-card__text {
+    font-size: 0.9rem;
+    color: var(--clr-text-sec);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.srv-card__btn {
+    align-self: flex-start;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+    color: var(--clr-text);
+    border: 1px solid var(--clr-border);
+    background: transparent;
+    border-radius: var(--radius-sm);
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-subheading);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.srv-card__btn--primary {
+    background: var(--clr-primary);
+    color: #fff;
+    border-color: var(--clr-primary);
+}
+
+.srv-card__btn--primary:hover {
+    background: var(--clr-walnut);
+    border-color: var(--clr-walnut);
+}
+
+.srv-card__btn:not(.srv-card__btn--primary):hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+/* ============================================================
+   3. CUSTOM GUITAR BUILDS
+   ============================================================ */
+.srv-builds {
+    background: var(--clr-bg);
+    padding: 6rem 0 8rem;
+}
+
+.srv-builds__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .srv-builds__grid {
+        grid-template-columns: 1fr 1.2fr;
+    }
+}
+
+.srv-builds__image-wrap {
+    position: relative;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--clr-border);
+}
+
+.srv-builds__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.srv-float-card {
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    background: var(--clr-surface-offset);
+    padding: 2rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    max-width: 250px;
+    z-index: 2;
+    border: 1px solid var(--clr-border);
+}
+
+@media (max-width: 1024px) {
+    .srv-float-card {
+        bottom: -2rem;
+        left: 2rem;
+    }
+}
+
+.srv-float-card__title {
+    font-family: var(--font-subheading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 1rem;
+}
+
+.srv-float-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.srv-float-list li {
+    font-size: 0.8rem;
+    color: var(--clr-text-sec);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    line-height: 1.4;
+}
+
+.srv-float-list li::before {
+    content: '•';
+    color: var(--clr-primary);
+    font-weight: bold;
+}
+
+/* ============================================================
+   4. HARDWARE UPGRADES
+   ============================================================ */
+.srv-hardware {
+    background: var(--clr-surface-offset);
+    padding: 6rem 0;
+}
+
+.srv-hardware__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .srv-hardware__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.srv-hardware__image-wrap {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.srv-hardware__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.srv-hardware__titleline {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.srv-hardware__titleline h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin: 0;
+}
+
+.srv-hardware__titleline::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: var(--clr-border);
+}
+
+/* ============================================================
+   DARK MODE OVERRIDES
+   ============================================================ */
+[data-theme="dark"] .srv-card {
+    background: var(--clr-dark-surface);
+}
+[data-theme="dark"] .srv-card__btn {
+    border-color: rgba(255,255,255,0.2);
+    color: var(--clr-dark-text);
+}
+[data-theme="dark"] .srv-card__btn:not(.srv-card__btn--primary):hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}
+[data-theme="dark"] .srv-float-card {
+    background: var(--clr-dark-surface);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   RESPONSIVE — 1024px (Laptop)
+   ============================================================ */
+@media (max-width: 1024px) {
+    .srv-hero__content { max-width: 600px; }
+    .srv-expertise__grid,
+    .srv-hardware__grid { grid-template-columns: 1fr; gap: 2rem; }
+    .srv-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px (Tablet)
+   ============================================================ */
+@media (max-width: 768px) {
+    .srv-hero { min-height: 60vh; padding-top: 80px; }
+    .srv-hero__content { padding: 2rem; }
+    .srv-section-title { font-size: 1.9rem; }
+
+    .srv-expertise { padding: 3rem 0; }
+    .srv-expertise__grid { grid-template-columns: 1fr; }
+    .srv-expertise__image { height: 240px; }
+
+    .srv-cards-grid { grid-template-columns: 1fr; }
+
+    .srv-hardware { padding: 3rem 0; }
+    .srv-hardware__grid { grid-template-columns: 1fr; }
+    .srv-hardware__image-wrap { height: 240px; order: -1; }
+    .srv-hardware__titleline h2 { font-size: 1.8rem; }
+
+    .srv-float-list { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px (Mobile)
+   ============================================================ */
+@media (max-width: 480px) {
+    .srv-hero { padding-top: 70px; }
+    .srv-hero__content { padding: 1.5rem; }
+    .srv-section-title { font-size: 1.6rem; }
+    .srv-section-subtitle { font-size: 1rem; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .srv-section-subtitle::after { display: none; }
+
+    .srv-cards-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .srv-card { padding: 1.5rem; }
+
+    .srv-float-list { grid-template-columns: 1fr; }
+    .srv-hardware__titleline { flex-direction: column; align-items: flex-start; }
+    .srv-hardware__titleline::after { display: none; }
+
+    .srv-checks li { font-size: 0.88rem; }
+}

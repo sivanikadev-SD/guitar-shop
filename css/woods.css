@@ -1,0 +1,581 @@
+/* ============================================================
+   WOODS PAGE — DEDICATED STYLES
+   Artisan Guitars · woods.css
+   ============================================================ */
+
+/* ----- Shared Components ----- */
+.woods-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--clr-walnut);
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.woods-section-title::before,
+.woods-section-title::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background: var(--clr-primary);
+}
+
+.woods-text {
+    font-size: 0.95rem;
+    color: var(--clr-text-sec);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   1. HERO
+   ============================================================ */
+.woods-hero {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: #fff;
+    background: #2a1b14; /* Fallback */
+}
+
+.woods-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/wood_textures.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4) saturate(0.8) contrast(1.2);
+    z-index: 0;
+}
+
+.woods-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.7) 0%,
+        rgba(0,0,0,0.3) 50%,
+        rgba(0,0,0,0.7) 100%
+    );
+    z-index: 1;
+}
+
+.woods-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.woods-hero__title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.woods-hero__desc {
+    font-family: var(--font-subheading);
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.woods-hero__desc::after {
+    content: '';
+    height: 1px;
+    width: 80px;
+    background: rgba(255,255,255,0.4);
+}
+
+/* Hero Filter Tabs */
+.woods-hero__filters {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    background: rgba(30, 20, 15, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    padding: 0;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.woods-filter-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-family: var(--font-subheading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.woods-filter-btn:last-child {
+    border-right: none;
+}
+
+.woods-filter-btn:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.woods-filter-btn.active {
+    background: var(--clr-primary);
+    color: #fff;
+}
+
+/* ============================================================
+   2. WOODS GRID
+   ============================================================ */
+.woods-vault {
+    background: var(--clr-surface-offset);
+    padding: 5rem 0;
+}
+
+.woods-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 600px) {
+    .woods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .woods-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.wood-card {
+    background: var(--clr-surface);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.wood-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Texture Top Half */
+.wood-card__texture {
+    height: 240px;
+    background-image: url('../assets/wood_textures.png');
+    background-size: 200% 200%; /* For existing 4-grid texture image */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+/* Specific texture positions for the 4 card types */
+.wood-card__texture--mahogany { background-position: top left; }
+.wood-card__texture--maple { background-position: top right; color: var(--clr-walnut); }
+.wood-card__texture--rosewood { background-position: bottom left; }
+.wood-card__texture--ebony { background-position: bottom right; }
+
+.wood-card__texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+.wood-card__texture--maple::before {
+    background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+}
+
+.wood-card__name {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.wood-card__tone {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-subheading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.wood-card__sub {
+    position: relative;
+    z-index: 2;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Content Bottom Half */
+.wood-card__content {
+    background: var(--clr-surface);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.wood-card__best {
+    font-size: 0.75rem;
+    color: var(--clr-text-sec);
+    margin-bottom: 1.5rem;
+}
+
+.wood-card__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background: var(--clr-surface-offset);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text);
+    font-family: var(--font-subheading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    width: 100%;
+}
+
+.wood-card__btn:hover {
+    background: var(--clr-primary);
+    color: #fff;
+    border-color: var(--clr-primary);
+}
+
+.wood-card__btn--brown {
+    background: var(--clr-primary);
+    color: #fff;
+    border-color: var(--clr-primary);
+}
+
+.wood-card__btn--brown:hover {
+    background: var(--clr-walnut);
+}
+
+/* ============================================================
+   3. ABOUT SECTION
+   ============================================================ */
+.woods-about {
+    background: var(--clr-surface-offset);
+    padding: 5rem 0 6rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.woods-about__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .woods-about__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.woods-about__title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--clr-walnut);
+    margin-bottom: 0.5rem;
+}
+
+.woods-about__subtitle {
+    font-size: 1.1rem;
+    color: var(--clr-text-sec);
+    margin-bottom: 2rem;
+}
+
+.woods-about__features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.woods-feature {
+    background: var(--clr-surface);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--clr-border);
+}
+
+.woods-feature__title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-subheading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 0.8rem;
+}
+
+.woods-feature__title i {
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+}
+
+.woods-feature p {
+    font-size: 0.75rem;
+    color: var(--clr-text-sec);
+    line-height: 1.6;
+}
+
+.woods-about__image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   4. CTA SECTION
+   ============================================================ */
+.woods-cta {
+    position: relative;
+    padding: 6rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.woods-cta__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/wood_textures.png');
+    background-size: cover;
+    background-position: bottom center;
+    filter: brightness(0.25) contrast(1.2);
+    z-index: 0;
+}
+
+.woods-cta__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.woods-cta__title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.woods-cta__title::before,
+.woods-cta__title::after {
+    content: '';
+    height: 1px;
+    width: 100px;
+    background: rgba(255,255,255,0.3);
+}
+
+.woods-cta__text {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2.5rem;
+}
+
+.woods-cta .btn-primary {
+    background: #6a341e;
+    border-color: #6a341e;
+}
+
+.woods-cta .btn-primary:hover {
+    background: transparent;
+}
+
+/* ============================================================
+   FOOTER (CUSTOMIZED FOR WOODS PAGE)
+   ============================================================ */
+.woods-footer {
+    background: #1a100b;
+    padding: 3rem 0;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+}
+
+.woods-footer__logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #4B2E2B, #6a341e);
+    border-radius: 12px 12px 24px 24px;
+    margin-bottom: 2rem;
+}
+
+.woods-footer__logo i {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+}
+
+.woods-footer__nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.woods-footer__nav a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: var(--font-subheading);
+    font-weight: 500;
+}
+
+.woods-footer__nav a:hover {
+    color: var(--clr-amber);
+}
+
+.woods-footer__contact {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.woods-footer__contact span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.woods-footer__contact span i {
+    color: var(--clr-amber);
+}
+
+.woods-footer__bottom {
+    font-size: 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.woods-footer__bottom a {
+    color: rgba(255,255,255,0.6);
+}
+
+.woods-footer__bottom a:hover {
+    color: #fff;
+}
+
+/* ============================================================
+   DARK MODE OVERRIDES
+   ============================================================ */
+[data-theme="dark"] .woods-feature {
+    background: var(--clr-dark-surface);
+}
+[data-theme="dark"] .wood-card {
+    background: var(--clr-dark-surface);
+}
+[data-theme="dark"] .wood-card__content {
+    background: var(--clr-dark-surface);
+}
+
+/* ============================================================
+   RESPONSIVE — 1024px (Laptop)
+   ============================================================ */
+@media (max-width: 1024px) {
+    .woods-hero__title { font-size: 2.4rem; }
+    .woods-grid { grid-template-columns: repeat(2, 1fr); }
+    .woods-about__grid { gap: 2.5rem; }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px (Tablet)
+   ============================================================ */
+@media (max-width: 768px) {
+    .woods-hero { min-height: 360px; padding-top: 80px; }
+    .woods-hero__title { font-size: 2rem; }
+    .woods-hero__desc { font-size: 0.95rem; }
+    .woods-hero__filters { flex-wrap: wrap; border-radius: var(--radius-sm); }
+    .woods-filter-btn { padding: 0.6rem 1rem; font-size: 0.82rem; }
+
+    .woods-vault { padding: 3rem 0; }
+    .woods-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .woods-about { padding: 3rem 0 4rem; }
+    .woods-about__grid { grid-template-columns: 1fr; }
+    .woods-about__features { grid-template-columns: 1fr; }
+    .woods-about__image { height: 260px; }
+
+    .woods-cta { padding: 4rem 0; }
+    .woods-cta__title { font-size: 1.7rem; flex-direction: column; gap: 0.8rem; }
+    .woods-cta__title::before, .woods-cta__title::after { width: 60px; }
+
+    .woods-section-title { font-size: 1.8rem; }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px (Mobile)
+   ============================================================ */
+@media (max-width: 480px) {
+    .woods-hero__title { font-size: 1.7rem; }
+    .woods-hero__filters { width: 100%; margin: 1rem 1rem 0; }
+    .woods-filter-btn { flex: 1; text-align: center; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+    .woods-grid { grid-template-columns: 1fr; }
+    .wood-card__texture { height: 180px; }
+
+    .woods-about__features { grid-template-columns: 1fr; }
+    .woods-about__title { font-size: 1.6rem; }
+
+    .woods-cta__title { font-size: 1.4rem; }
+    .woods-cta .btn { width: 100%; justify-content: center; }
+}

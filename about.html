@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Artisan Guitars</title>
+    <meta name="description" content="Learn about our passion and precision in building custom handcrafted guitars. Meet the master luthiers dedicated to creating one-of-a-kind instruments.">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('isRTL') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+<body>
+    <!-- =========== NAVBAR =========== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            <nav class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)">Home <i class="ph ph-caret-down"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="woods.html">Woods</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html" class="nav-dashboard">Dashboard</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="rtl-toggle" aria-label="Toggle RTL" style="background:none;border:1px solid var(--clr-border);border-radius:var(--radius-sm);padding:0.4rem 0.6rem;cursor:pointer;color:var(--clr-text);font-family:var(--font-subheading);font-weight:bold;font-size:0.8rem;">RTL</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                <div class="cta-group">
+                    <a href="login.html" class="btn btn-outline" style="border-color:transparent;">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== 1. ABOUT HERO =========== -->
+        <section class="about-hero">
+            <div class="about-hero__bg">
+                <img src="assets/about_hero_bg.png" alt="Craftsmanship workshop" class="about-hero__image">
+                <div class="about-hero__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="about-hero__content">
+                    <h1 class="about-hero__title">The Art of Craftsmanship</h1>
+                    <p class="about-hero__subtitle">Building Custom Guitars with Passion &amp; Precision.</p>
+                    <p class="about-hero__desc">Our workshop has been crafting exceptional guitars for decades, combining traditional tools with modern refinement. Each craftsmanship has a beauty and feeling that is designed for artists to inspire.</p>
+                    <div class="about-hero__cta">
+                        <a href="signup.html" class="btn btn-primary">Start Custom Build</a>
+                        <a href="portfolio.html" class="btn about-hero__outline-btn">Explore Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 2. OUR STORY & PHILOSOPHY =========== -->
+        <section class="about-story">
+            <div class="container">
+                <div class="about-story__grid">
+                    <div class="about-story__image-wrap">
+                        <img src="assets/fretboard_work.png" alt="Luthier hands working on fretboard" class="about-story__image">
+                    </div>
+                    <div class="about-story__content">
+                        <h2 class="about-story__title">Our Story &amp; Philosophy</h2>
+                        <div class="about-story__subtitle">
+                            Where Passion Meets Precision
+                        </div>
+                        <p class="about-story__text">We are passionate luthiers dedicated to creating one-of-a-kind instruments. Our journey began with a deep love for music and craftsmanship. Each guitar is a labor of love, crafted with meticulous attention to detail, ensuring both breathtaking aesthetics and unmatched tonal quality.</p>
+                        <div class="about-story__badges">
+                            <div class="about-story__badge">
+                                <i class="ph ph-hands-clapping"></i>
+                                Handcrafted Excellence
+                            </div>
+                            <div class="about-story__badge">
+                                <i class="ph ph-tree-palm"></i>
+                                Premium Materials
+                            </div>
+                            <div class="about-story__badge">
+                                <i class="ph ph-bezier-curve"></i>
+                                Artistry &amp; Precision
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                    <div class="about-features__list">
+                        <div class="about-feature">
+                            <i class="ph ph-wrench about-feature__icon"></i>
+                            <div class="about-feature__text">
+                                <h4>Handcrafted Excellence</h4>
+                                <p>We meticulously craft each guitar by hand, ensuring superior quality and a personalized touch.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="ph ph-globe-hemisphere-west about-feature__icon"></i>
+                            <div class="about-feature__text">
+                                <h4>Premium Materials</h4>
+                                <p>Only the finest, carefully selected tonewoods and hardware make it into our instruments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/guitar_body_close.png" alt="Finished guitar body" class="about-features__image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 3. OUR VALUES =========== -->
+        <section class="about-values">
+            <div class="container">
+                <div class="about-values__header">
+                    <h2 class="about-section-title" style="margin: 0;">Our Values</h2>
+                </div>
+                <div class="about-values__grid">
+                    <div class="about-value-card">
+                        <img src="assets/luthier_working.png" alt="Craftsman carving wood" class="about-value-card__image">
+                        <div class="about-value-card__content">
+                            <h3 class="about-value-card__title">True Craftsmanship</h3>
+                            <p class="about-value-card__text">Every guitar is handcrafted with passion and precision, blending traditional techniques with modern innovation.</p>
+                        </div>
+                    </div>
+                    <div class="about-value-card">
+                        <img src="assets/electric_portfolio.png" alt="Guitar body" class="about-value-card__image">
+                        <div class="about-value-card__content">
+                            <h3 class="about-value-card__title">Unique Sound</h3>
+                            <p class="about-value-card__text">Each instrument is a collaboration with you, designed to match your personal sound and style.</p>
+                        </div>
+                    </div>
+                    <div class="about-value-card">
+                        <img src="assets/two_luthiers.png" alt="Two luthiers" class="about-value-card__image">
+                        <div class="about-value-card__content">
+                            <h3 class="about-value-card__title">Dedicated Team</h3>
+                            <p class="about-value-card__text">Our skilled luthiers are musicians and artisans, driven by the love of music and dedication to perfection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 4. MEET THE LUTHIERS =========== -->
+        <section class="about-luthiers">
+            <div class="container about-luthiers__inner">
+                <div class="about-luthiers__header">
+                    <h2 class="about-section-title about-section-title--light" style="margin: 0;">Meet the Luthiers</h2>
+                </div>
+                
+                <div class="about-luthiers__top">
+                    <p class="about-luthiers__top-text">Our team of expert luthiers is driven by a deep love for creating instruments. Each luthier brings their unique skills and dedication to every project.</p>
+                </div>
+
+                <div class="about-luthiers__grid">
+                    <!-- Left card â€” large, tall -->
+                    <div class="about-luthier-card">
+                        <img src="assets/luthier_portrait.png" alt="Nathan James" class="about-luthier-card__image">
+                        <div class="about-luthier-card__content">
+                            <div class="about-luthier-card__top">
+                                <div>
+                                    <h3 class="about-luthier-card__title">Nathan James</h3>
+                                    <span class="about-luthier-card__role">Master Luthier</span>
+                                </div>
+                                <span class="about-luthier-card__badge">Senior Luthier</span>
+                            </div>
+                            <p class="about-luthier-card__desc">20+ years of experience in crafting custom guitars. Head of ultimate builds.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right column â€” description text floated above second card -->
+                    <div class="about-luthiers__right-col">
+                        <p class="about-luthiers__right-text">Our team of experienced luthiers is driven by a deep love for their instrumentation. Each luthier brings the unique skills and dedication to every project.</p>
+
+                        <div class="about-luthier-card about-luthier-card--small">
+                            <img src="assets/two_luthiers.png" alt="Ethan Miller" class="about-luthier-card__image">
+                            <div class="about-luthier-card__content">
+                                <div class="about-luthier-card__top">
+                                    <div>
+                                        <h3 class="about-luthier-card__title">Ethan Miller</h3>
+                                        <span class="about-luthier-card__role">Senior Luthier</span>
+                                    </div>
+                                    <span class="about-luthier-card__badge">Senior Luthier</span>
+                                </div>
+                                <p class="about-luthier-card__desc">15+ years of experience specializing in repair and restoration custom orders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand-info">
+                    <a href="index.html" class="brand-logo text-white"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                    <p style="margin-top: 1.5rem; color: #a1a1aa; line-height: 1.8;">Where centuries of traditional luthier craftsmanship meet absolute modern portal transparency. Built for the player, by the player.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="about.html">Our Philosophy</a>
+                    <a href="services.html">Luthier Services</a>
+                    <a href="woods.html">The Wood Vault</a>
+                    <a href="portfolio.html">Gallery &amp; Artists</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support Options</h4>
+                    <a href="pricing.html">Pricing Structure</a>
+                    <a href="contact.html">Contact the Bench</a>
+                    <a href="dashboard.html">Client Login</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons" style="margin-top: 1rem;">
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph ph-youtube-logo"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artisan Guitars Workshop. All rights strictly reserved. NY, USA.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- =========== MOBILE DRAWER =========== -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer__overlay"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__header">
+                <a href="index.html" class="mobile-drawer__logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                <button class="mobile-drawer__close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+            </div>
+            <nav class="mobile-drawer__links">
+                <a href="index.html"><i class="ph ph-house"></i> Home</a>
+                <a href="home2.html"><i class="ph ph-house-line"></i> Home 2</a>
+                <a href="about.html" class="active"><i class="ph ph-info"></i> About</a>
+                <a href="services.html"><i class="ph ph-wrench"></i> Services</a>
+                <a href="woods.html"><i class="ph ph-tree-evergreen"></i> Woods</a>
+                <a href="portfolio.html"><i class="ph ph-images"></i> Portfolio</a>
+                <a href="pricing.html"><i class="ph ph-tag"></i> Pricing</a>
+                <a href="contact.html"><i class="ph ph-envelope"></i> Contact</a>
+                <div class="mobile-drawer__divider"></div>
+                <a href="dashboard.html" class="nav-dashboard"><i class="ph ph-layout"></i> Dashboard</a>
+            </nav>
+            <div class="mobile-drawer__footer">
+                <div class="mobile-drawer__auth">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="mobile-drawer__controls">
+                    <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+

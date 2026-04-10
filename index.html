@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Artisan Guitars â€” Craft Your Signature Sound</title>
+    <meta name="description" content="Design a one-of-a-kind handcrafted guitar tailored to your tone, style and identity. 25+ years of luthier excellence, 1,200+ guitars crafted.">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('isRTL') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+<body>
+    <!-- =========== NAVBAR =========== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            <nav class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="active">Home <i class="ph ph-caret-down"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html" class="active">Home 1</a>
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="woods.html">Woods</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html" class="nav-dashboard">Dashboard</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="rtl-toggle" aria-label="Toggle RTL" style="background:none;border:1px solid var(--clr-border);border-radius:var(--radius-sm);padding:0.4rem 0.6rem;cursor:pointer;color:var(--clr-text);font-family:var(--font-subheading);font-weight:bold;font-size:0.8rem;">RTL</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                <div class="cta-group">
+                    <a href="login.html" class="btn btn-outline" style="border-color:transparent;">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== 1. HERO =========== -->
+        <section id="home" class="home-hero">
+            <div class="home-hero__bg">
+                <img src="assets/hero_guitar.png" alt="Handcrafted Custom Guitar Workshop" class="home-hero__image">
+                <div class="home-hero__overlay"></div>
+            </div>
+            <div class="home-hero__content">
+                <h1 class="home-hero__title">Craft Your Signature Sound</h1>
+                <p class="home-hero__subtitle">Design a one-of-a-kind instrument tailored to your tone, style and identity.</p>
+                <div class="home-hero__cta">
+                    <a href="signup.html" class="btn btn-primary btn-large" id="heroStartBuild">Start Custom Build</a>
+                    <a href="portfolio.html" class="btn home-hero__outline-btn btn-large" id="heroExploreGallery">Explore Gallery</a>
+                </div>
+                <div class="home-hero__stats">
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-number">25+</span>
+                        <span class="home-hero__stat-label">Years Experience</span>
+                    </div>
+                    <div class="home-hero__stat-divider"></div>
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-number">1,200+</span>
+                        <span class="home-hero__stat-label">Guitars Crafted</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 2. CRAFTSMANSHIP STORY =========== -->
+        <section class="home-craft">
+            <div class="home-craft__inner container">
+                <div class="home-craft__image-wrap">
+                    <img src="assets/luthier_craftsman.png" alt="Master luthier at work" class="home-craft__image">
+                </div>
+                <div class="home-craft__text">
+                    <h2 class="home-craft__title">Our Craftsmanship Story</h2>
+                    <p class="home-craft__desc">Passionate about creating exceptional handcrafted instruments. Combining precision with artistry to bring your musical vision to life.</p>
+                    <div class="home-craft__badges">
+                        <div class="home-craft__badge">
+                            <i class="ph ph-globe-hemisphere-west"></i>
+                            <span>Handcrafted Excellence</span>
+                        </div>
+                        <div class="home-craft__badge">
+                            <i class="ph ph-leaf"></i>
+                            <span>Premium Materials</span>
+                        </div>
+                        <div class="home-craft__badge">
+                            <i class="ph ph-user-circle"></i>
+                            <span>Personalized Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 3. OUR SERVICES =========== -->
+        <section class="home-services">
+            <div class="container">
+                <h2 class="home-section-title">Our Services</h2>
+                <div class="home-services__grid">
+                    <div class="home-svc-card" id="svcCustom">
+                        <div class="home-svc-card__header">
+                            <i class="ph ph-guitar"></i>
+                            <h3>Custom Guitar Builds</h3>
+                        </div>
+                        <p class="home-svc-card__tag">Warm &amp; Rich</p>
+                        <p class="home-svc-card__tag">Vintage Warmth</p>
+                    </div>
+                    <div class="home-svc-card" id="svcRepair">
+                        <div class="home-svc-card__header">
+                            <i class="ph ph-wrench"></i>
+                            <h3>Repair &amp; Restoration</h3>
+                        </div>
+                        <p class="home-svc-card__tag">Bright &amp; Clear</p>
+                        <p class="home-svc-card__tag">Crisp &amp; Articulate</p>
+                    </div>
+                    <div class="home-svc-card" id="svcHardware">
+                        <div class="home-svc-card__header">
+                            <i class="ph ph-sliders-horizontal"></i>
+                            <h3>Hardware Upgrades</h3>
+                        </div>
+                        <p class="home-svc-card__tag">Deep &amp; Resonant</p>
+                        <p class="home-svc-card__tag">Smooth &amp; Balanced</p>
+                    </div>
+                    <div class="home-svc-card" id="svcTone">
+                        <div class="home-svc-card__header">
+                            <i class="ph ph-equalizer"></i>
+                            <h3>Tone Optimization</h3>
+                        </div>
+                        <p class="home-svc-card__tag">Dark &amp; Focused</p>
+                        <p class="home-svc-card__tag">Ideal for Modern Styles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 4. CHOOSE YOUR TONEWOOD =========== -->
+        <section class="home-woods">
+            <div class="container">
+                <div class="home-section-divider">
+                    <span class="home-section-divider__line"></span>
+                    <h2 class="home-section-title home-section-title--inline">Choose Your Tonewood</h2>
+                    <span class="home-section-divider__line"></span>
+                </div>
+                <div class="home-woods__grid">
+                    <div class="home-wood-card home-wood-card--mahogany" id="woodMahogany">
+                        <h3 class="home-wood-card__name">Mahogany</h3>
+                        <p class="home-wood-card__tone">Warm &amp; Rich</p>
+                        <p class="home-wood-card__sub">Vintage Warmth</p>
+                    </div>
+                    <div class="home-wood-card home-wood-card--maple home-wood-card--active" id="woodMaple">
+                        <h3 class="home-wood-card__name">Maple</h3>
+                        <p class="home-wood-card__tone">Bright &amp; Clear</p>
+                        <p class="home-wood-card__sub">Crisp &amp; Articulate</p>
+                    </div>
+                    <div class="home-wood-card home-wood-card--rosewood" id="woodRosewood">
+                        <h3 class="home-wood-card__name">Rosewood</h3>
+                        <p class="home-wood-card__tone">Deep &amp; Resonant</p>
+                        <p class="home-wood-card__sub">Smooth &amp; Balanced</p>
+                    </div>
+                    <div class="home-wood-card home-wood-card--ebony" id="woodEbony1">
+                        <h3 class="home-wood-card__name">Ebony</h3>
+                        <p class="home-wood-card__tone">Dark &amp; Focused</p>
+                        <p class="home-wood-card__sub">Ideal for Modern Styles</p>
+                    </div>
+                    <div class="home-wood-card home-wood-card--walnut" id="woodWalnut">
+                        <h3 class="home-wood-card__name">Walnut</h3>
+                        <p class="home-wood-card__tone">Dark &amp; Focused</p>
+                        <p class="home-wood-card__sub">Ideal for Modern Styles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 5. OUR PROCESS =========== -->
+        <section class="home-process">
+            <div class="container">
+                <h2 class="home-section-title">Our Process</h2>
+                <div class="home-process__steps">
+                    <div class="home-process__step">
+                        <div class="home-process__icon"><i class="ph ph-chat-circle-text"></i></div>
+                        <span class="home-process__label">Consultation</span>
+                    </div>
+                    <div class="home-process__connector"></div>
+                    <div class="home-process__step">
+                        <div class="home-process__icon"><i class="ph ph-blueprint"></i></div>
+                        <span class="home-process__label">Design Blueprint</span>
+                    </div>
+                    <div class="home-process__connector"></div>
+                    <div class="home-process__step">
+                        <div class="home-process__icon"><i class="ph ph-tree-evergreen"></i></div>
+                        <span class="home-process__label">Wood Selection</span>
+                    </div>
+                    <div class="home-process__connector"></div>
+                    <div class="home-process__step">
+                        <div class="home-process__icon"><i class="ph ph-hammer"></i></div>
+                        <span class="home-process__label">Crafting</span>
+                    </div>
+                    <div class="home-process__connector"></div>
+                    <div class="home-process__step">
+                        <div class="home-process__icon"><i class="ph ph-paint-brush"></i></div>
+                        <span class="home-process__label">Finishing</span>
+                    </div>
+                    <div class="home-process__connector"></div>
+                    <div class="home-process__step">
+                        <div class="home-process__icon"><i class="ph ph-truck"></i></div>
+                        <span class="home-process__label">Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 6. OUR PORTFOLIO =========== -->
+        <section class="home-portfolio">
+            <div class="home-portfolio__bg">
+                <img src="assets/wood_textures.png" alt="Workshop background" class="home-portfolio__bgimg">
+                <div class="home-portfolio__overlay"></div>
+            </div>
+            <div class="container home-portfolio__inner">
+                <h2 class="home-section-title home-section-title--light">Our Portfolio</h2>
+                <!-- Filter Tabs -->
+                <div class="home-portfolio__tabs" role="tablist">
+                    <button class="home-portfolio__tab home-portfolio__tab--active" data-filter="all" id="tabAll">All</button>
+                    <button class="home-portfolio__tab" data-filter="acoustic" id="tabAcoustic">Acoustic</button>
+                    <button class="home-portfolio__tab" data-filter="electric" id="tabElectric">Electric</button>
+                    <button class="home-portfolio__tab" data-filter="bass" id="tabBass">Bass</button>
+                </div>
+
+                <div class="home-portfolio__content">
+                    <!-- Gallery -->
+                    <div class="home-portfolio__gallery">
+                        <div class="home-portfolio__item" data-category="acoustic">
+                            <img src="assets/guitar_headstock.png" alt="Aria Custom â€” Flamed Maple">
+                            <div class="home-portfolio__caption">
+                                <span class="home-portfolio__guitar-name">Aria Custom</span>
+                                <span class="home-portfolio__guitar-meta">Flamed Maple Â· 2021</span>
+                            </div>
+                        </div>
+                        <div class="home-portfolio__item" data-category="electric">
+                            <img src="assets/electric_portfolio.png" alt="Vintage Strato â€” Aged Ash">
+                            <div class="home-portfolio__caption">
+                                <span class="home-portfolio__guitar-name">Vintage Strato</span>
+                                <span class="home-portfolio__guitar-meta">Aged Ash Â· 2020</span>
+                            </div>
+                        </div>
+                        <div class="home-portfolio__item" data-category="bass">
+                            <img src="assets/bass_portfolio.png" alt="Elite Bass â€” Walnut">
+                            <div class="home-portfolio__caption">
+                                <span class="home-portfolio__guitar-name">Elite Bass</span>
+                                <span class="home-portfolio__guitar-meta">Walnut Â· 2019</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Preview Card -->
+                    <div class="home-dashboard-card">
+                        <div class="home-dashboard-card__header">
+                            <i class="ph ph-guitar"></i>
+                            <span>Welcome back, Artist!</span>
+                        </div>
+                        <div class="home-dashboard-card__section">
+                            <div class="home-dashboard-card__label"><i class="ph ph-note-pencil"></i> Current Project</div>
+                            <div class="home-dashboard-card__progress-bar">
+                                <div class="home-dashboard-card__progress-fill" style="width: 60%;"></div>
+                            </div>
+                            <ul class="home-dashboard-card__checklist">
+                                <li class="done"><i class="ph-fill ph-check-circle"></i> Build Progress</li>
+                                <li class="done"><i class="ph-fill ph-check-circle"></i> Tonewoods Selected</li>
+                            </ul>
+                        </div>
+                        <div class="home-dashboard-card__section">
+                            <div class="home-dashboard-card__label"><i class="ph ph-clock"></i> Tonewoods Selected</div>
+                            <ul class="home-dashboard-card__checklist">
+                                <li><i class="ph ph-circle"></i> Engraration Selectis</li>
+                                <li><i class="ph ph-circle"></i> Materia Selection Tools</li>
+                                <li><i class="ph ph-circle"></i> Order Tracking Timeline</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Bullets -->
+                <div class="home-portfolio__features">
+                    <div class="home-portfolio__feature"><i class="ph ph-check"></i> Real-Time Updates</div>
+                    <div class="home-portfolio__feature"><i class="ph ph-check"></i> Material Selection Tools</div>
+                    <div class="home-portfolio__feature"><i class="ph ph-check"></i> Order Tracking Timeline</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== 7. CLIENT TESTIMONIALS =========== -->
+        <section class="home-testimonials">
+            <div class="container">
+                <h2 class="home-section-title home-section-title--centered">Client Testimonials</h2>
+                <div class="home-testimonials__grid">
+                    <div class="home-testi-card" id="testiDavid">
+                        <img src="assets/luthier_working.png" alt="David R." class="home-testi-card__avatar">
+                        <h4 class="home-testi-card__name">David R.</h4>
+                        <div class="home-testi-card__stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <p class="home-testi-card__quote">"The partnering Artisan craftsmen surpassed my petitions and intent for challenging preferenmisting to modulsting deterest."</p>
+                    </div>
+                    <div class="home-testi-card" id="testiSarah">
+                        <img src="assets/gallery_electric.png" alt="Sarah M." class="home-testi-card__avatar">
+                        <h4 class="home-testi-card__name">Sarah M.</h4>
+                        <div class="home-testi-card__stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <p class="home-testi-card__quote">"The partners claim nataries mulabant stolbens constabsiting maste idealiante alt conditioning appmelis."</p>
+                    </div>
+                    <div class="home-testi-card" id="testiJames">
+                        <img src="assets/hero_guitar.png" alt="James L." class="home-testi-card__avatar">
+                        <h4 class="home-testi-card__name">James L.</h4>
+                        <div class="home-testi-card__stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <p class="home-testi-card__quote">"The center updates ldilt olt moots salp to bobhent too ithmonastons â€” il bamoab too apparent."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand-info">
+                    <a href="index.html" class="brand-logo text-white"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                    <p style="margin-top:1.5rem;color:#a1a1aa;line-height:1.8;">Where centuries of traditional luthier craftsmanship meet absolute modern portal transparency. Built for the player, by the player.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="about.html">Our Philosophy</a>
+                    <a href="services.html">Luthier Services</a>
+                    <a href="woods.html">The Wood Vault</a>
+                    <a href="portfolio.html">Gallery &amp; Artists</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support Options</h4>
+                    <a href="pricing.html">Pricing Structure</a>
+                    <a href="contact.html">Contact the Bench</a>
+                    <a href="dashboard.html">Client Login</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons" style="margin-top:1rem;">
+                        <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artisan Guitars Workshop. All rights strictly reserved. NY, USA.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- =========== MOBILE DRAWER =========== -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer__overlay"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__header">
+                <a href="index.html" class="mobile-drawer__logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                <button class="mobile-drawer__close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+            </div>
+            <nav class="mobile-drawer__links">
+                <a href="index.html" class="active"><i class="ph ph-house"></i> Home</a>
+                <a href="home2.html"><i class="ph ph-house-line"></i> Home 2</a>
+                <a href="about.html"><i class="ph ph-info"></i> About</a>
+                <a href="services.html"><i class="ph ph-wrench"></i> Services</a>
+                <a href="woods.html"><i class="ph ph-tree-evergreen"></i> Woods</a>
+                <a href="portfolio.html"><i class="ph ph-images"></i> Portfolio</a>
+                <a href="pricing.html"><i class="ph ph-tag"></i> Pricing</a>
+                <a href="contact.html"><i class="ph ph-envelope"></i> Contact</a>
+                <div class="mobile-drawer__divider"></div>
+                <a href="dashboard.html" class="nav-dashboard"><i class="ph ph-layout"></i> Dashboard</a>
+            </nav>
+            <div class="mobile-drawer__footer">
+                <div class="mobile-drawer__auth">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="mobile-drawer__controls">
+                    <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+

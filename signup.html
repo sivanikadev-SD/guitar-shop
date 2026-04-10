@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Artisan Guitars</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('isRTL') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+<body class="auth-body">
+    
+    <div class="auth-page">
+        <div class="auth-card">
+            <a href="index.html" class="brand-logo" style="display: block; text-align: center; margin-bottom: 2rem;"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            <h2>Start Your Journey</h2>
+            <p class="subtitle">Create an account to build your custom instrument.</p>
+            
+            <form action="dashboard.html" method="GET">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input-wrap">
+                        <input type="password" id="password" class="form-control" placeholder="Create a strong password" required>
+                        <i class="ph ph-eye password-toggle" id="togglePassword"></i>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+            </form>
+            
+            <div class="divider">OR</div>
+            
+            <div class="social-login">
+                <button class="btn-social"><i class="ph-fill ph-google-logo"></i> Google</button>
+                <button class="btn-social"><i class="ph-fill ph-apple-logo"></i> Apple</button>
+            </div>
+            
+            <div class="auth-footer">
+                Already have an account? <a href="login.html">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const docEl = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark') {
+            docEl.setAttribute('data-theme', 'dark');
+        }
+        if (localStorage.getItem('isRTL') === 'true') {
+            docEl.setAttribute('dir', 'rtl');
+        }
+        
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('ph-eye-slash');
+        });
+    </script>
+</body>
+</html>
+

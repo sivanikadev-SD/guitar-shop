@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch | Artisan Guitars</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('isRTL') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+<body style="background: var(--clr-bg);">
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            <nav class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)">Home <i class="ph ph-caret-down"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="home2.html">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="woods.html">Woods</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="dashboard.html" class="nav-dashboard">Dashboard</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="rtl-toggle" aria-label="Toggle RTL" style="background:none;border:1px solid var(--clr-border);border-radius:var(--radius-sm);padding:0.4rem;cursor:pointer;color:var(--clr-text);font-family:var(--font-subheading);font-weight:bold;font-size:0.8rem;">RTL</button>
+                <button class="theme-toggle" id="themeToggle"><i class="ph ph-moon"></i></button>
+                <div class="cta-group">
+                    <a href="login.html" class="btn btn-outline" style="border-color:transparent;">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-toggle"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="contact-hero">
+            <div class="container text-center contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>Bring your dream guitar to life. We're here to answer any questions and guide you through the custom build process.</p>
+            </div>
+        </section>
+
+        <!-- Light Background Section wrapping Cards and Form -->
+        <div class="light-bg-section">
+            <!-- 2. Contact Info Cards Section -->
+            <section class="contact-info-section">
+                <div class="container container-narrow">
+                    <div class="info-cards-wrapper">
+                        <div class="c-info-card">
+                            <i class="ph-light ph-envelope-simple"></i>
+                            <div class="c-info-text">
+                                <h3>Email Us</h3>
+                                <p>info@email.com</p>
+                            </div>
+                        </div>
+                        <div class="c-info-card">
+                            <i class="ph-light ph-phone"></i>
+                            <div class="c-info-text">
+                                <h3>Call Us</h3>
+                                <p>+1 123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="c-info-card">
+                            <i class="ph-light ph-map-pin"></i>
+                            <div class="c-info-text">
+                                <h3>Visit Us</h3>
+                                <p>123 Luthier Lane<br>Nashville, TN 12345</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business-hours text-center">
+                        <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Split Form Section -->
+            <section class="split-form-section">
+                <div class="container container-narrow">
+                    <div class="split-form-wrapper">
+                        <div class="split-form-content">
+                            <h2>Send Us a Message</h2>
+                            <form class="contact-form">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <textarea placeholder="Message" rows="5"></textarea>
+                                </div>
+                                <button type="button" class="btn c-btn-primary">Send Message</button>
+                            </form>
+                            <div class="form-footer">
+                                <p>Have questions? Need more info? <i class="ph-light ph-phone"></i></p>
+                                <div class="social-icons">
+                                    <i class="ph ph-instagram-logo"></i>
+                                    <i class="ph ph-youtube-logo"></i>
+                                    <i class="ph ph-facebook-logo"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="split-image-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.267763248624!2d-86.7816!3d36.1627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88646697!2sNashville%2C+TN!5e0!3m2!1sen!2sus!4v1700000000000"
+                                width="100%"
+                                height="100%"
+                                style="border:0; min-height: 400px;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Artisan Guitars Workshop Location">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Map Section -->
+        <section class="c-map-section">
+            <div class="c-map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103373.63800887232!2d-86.8688!3d36.1627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88646697436921d7%3A0x31ff9f4c79dbd4b5!2sNashville%2C%20TN%2C%20USA!5e0!3m2!1sen!2sin!4v1700000000000"
+                    width="100%"
+                    height="420"
+                    style="border:0; display:block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Find Artisan Guitars Workshop in Nashville">
+                </iframe>
+                <div class="c-map-card">
+                    <i class="ph-fill ph-map-pin" style="font-size: 1.5rem; color: #a85834; margin-bottom: 0.5rem;"></i>
+                    <h4>Artisan Guitars Workshop</h4>
+                    <p>123 Luthier Lane<br>Nashville, TN 12345</p>
+                    <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem;">Mon â€“ Fri: 9:00 AM â€“ 6:00 PM</p>
+                    <a href="https://maps.google.com/?q=Nashville,TN" target="_blank" class="c-map-directions-btn">Get Directions <i class="ph ph-arrow-square-out"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FAQ Section -->
+        <section class="dark-texture-section c-faq-section">
+            <div class="container section-spacing relative" style="z-index: 1;">
+                <h2 class="section-title" style="color: var(--clr-amber);">Frequently Asked Questions</h2>
+                
+                <div class="faq-accordion center-max">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does a custom build take?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Our current waitlist is approximately 8 to 12 months from the time your deposit is secured, depending on the complexity of your requested instrument.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            Can I visit the workshop?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Yes, we welcome workshop visits by appointment. Come see our process and meet the luthiers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you offer repair services?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>We primarily construct custom instruments, however, we do maintain a repair bench for our own previous builds and touring professionals by appointment.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I choose the right tonewoods?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>During your initial consultation, our master builder will guide you through the wood vault, discussing acoustic properties out of our private, CITES-certified stock.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand-info">
+                    <a href="index.html" class="brand-logo text-white"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                    <p style="margin-top:1.5rem;color:#a1a1aa;line-height:1.8;">Where centuries of traditional luthier craftsmanship meet absolute modern portal transparency. Built for the player, by the player.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="about.html">Our Philosophy</a>
+                    <a href="services.html">Luthier Services</a>
+                    <a href="woods.html">The Wood Vault</a>
+                    <a href="portfolio.html">Gallery &amp; Artists</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support Options</h4>
+                    <a href="pricing.html">Pricing Structure</a>
+                    <a href="contact.html">Contact the Bench</a>
+                    <a href="dashboard.html">Client Login</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons" style="margin-top:1rem;">
+                        <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artisan Guitars Workshop. All rights strictly reserved. NY, USA.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- =========== MOBILE DRAWER =========== -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer__overlay"></div>
+        <div class="mobile-drawer__panel">
+            <div class="mobile-drawer__header">
+                <a href="index.html" class="mobile-drawer__logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+                <button class="mobile-drawer__close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+            </div>
+            <nav class="mobile-drawer__links">
+                <a href="index.html"><i class="ph ph-house"></i> Home</a>
+                <a href="home2.html"><i class="ph ph-house-line"></i> Home 2</a>
+                <a href="about.html"><i class="ph ph-info"></i> About</a>
+                <a href="services.html"><i class="ph ph-wrench"></i> Services</a>
+                <a href="woods.html"><i class="ph ph-tree-evergreen"></i> Woods</a>
+                <a href="portfolio.html"><i class="ph ph-images"></i> Portfolio</a>
+                <a href="pricing.html"><i class="ph ph-tag"></i> Pricing</a>
+                <a href="contact.html" class="active"><i class="ph ph-envelope"></i> Contact</a>
+                <div class="mobile-drawer__divider"></div>
+                <a href="dashboard.html" class="nav-dashboard"><i class="ph ph-layout"></i> Dashboard</a>
+            </nav>
+            <div class="mobile-drawer__footer">
+                <div class="mobile-drawer__auth">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="mobile-drawer__controls">
+                    <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const questionBtn = item.querySelector('.faq-question');
+                
+                questionBtn.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(i => {
+                        if (i !== item) i.classList.remove('active');
+                    });
+                    
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

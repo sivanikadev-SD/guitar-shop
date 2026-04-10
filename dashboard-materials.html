@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials | Artisan Guitars</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('isRTL') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+<body>
+    
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo" style="font-size: 1.2rem;"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="ph ph-guitars"></i> My Builds
+                </a>
+                <a href="dashboard-design.html" class="sidebar-link">
+                    <i class="ph ph-paint-brush"></i> Design Tool
+                </a>
+                <a href="dashboard-materials.html" class="sidebar-link active">
+                    <i class="ph ph-tree-evergreen"></i> Materials
+                </a>
+                <a href="dashboard-orders.html" class="sidebar-link">
+                    <i class="ph ph-receipt"></i> Orders
+                </a>
+                <a href="dashboard-messages.html" class="sidebar-link">
+                    <i class="ph ph-chat-text"></i> Messages <span style="background:var(--clr-primary);color:#fff;padding:2px 6px;border-radius:10px;font-size:0.75rem;margin-left:auto;">2</span>
+                </a>
+                <a href="dashboard-settings.html" class="sidebar-link">
+                    <i class="ph ph-gear"></i> Settings
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer" style="display:flex; flex-direction:column; gap:0.5rem;">
+                <button class="theme-toggle" id="themeToggle" style="width:100%; border-radius:var(--radius-sm); border:1px solid var(--clr-border); justify-content:flex-start; gap:0.5rem; padding-left:1rem; border:none; background:var(--clr-primary-light);">
+                    <i class="ph ph-moon"></i> Dark Mode
+                </button>
+                <button class="logout-btn" style="width:100%; border-radius:var(--radius-sm); border:1px solid var(--clr-border); justify-content:flex-start; gap:0.5rem; padding-left:1rem; border:none; background:transparent; color:var(--clr-text-sec); font-weight:500; font-family:var(--font-body); cursor:pointer; display:flex; align-items:center; padding:0.8rem 1.5rem; transition:var(--transition);">
+                    <i class="ph ph-sign-out" style="font-size:1.2rem;"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Mobile Top Bar -->
+            <div class="dash-mobile-top">
+                <button class="dash-menu-toggle" aria-label="Open sidebar"><i class="ph ph-list"></i></button>
+                <div class="brand-logo" style="margin:0; font-size:1.1rem;"><i class="ph-fill ph-guitar"></i> <span style="display:none;">Artisan Guitars</span></div>
+                <div class="avatar" style="width:36px; height:36px; font-size:0.9rem;">JD</div>
+            </div>
+
+            <header class="dashboard-header">
+                <div>
+                    <h2>Material Consignment</h2>
+                    <p style="margin:0;">Approve the exact physical wood slabs pulled from our vault for your build.</p>
+                </div>
+                <div class="user-profile-menu desktop-only">
+                    <a href="index.html" class="btn btn-outline" style="padding:0.5rem 1rem;">Back to Site</a>
+                    <div class="avatar">JD</div>
+                </div>
+            </header>
+
+            <div class="tracker-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--clr-border); padding-bottom: 1rem;">
+                    <div>
+                        <span class="section-label" style="font-size: 0.8rem;">RESERVED SLAB #B-492</span>
+                        <h3 style="margin-top: 0.5rem;">Master Grade Flame Maple (Top Plate)</h3>
+                    </div>
+                    <span style="background: rgba(30, 200, 100, 0.2); color: #1e8e3e; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold;"><i class="ph ph-check-circle"></i> Approved</span>
+                </div>
+                <div style="width: 100%; height: 300px; background: url('assets/wood_textures.png') top right / cover; border-radius: var(--radius-md);"></div>
+                <p class="body-text" style="margin-top: 1.5rem; color: var(--clr-text-sec);">Tap tuned at 440hz. This specific piece exhibits extensive 3D bear-claw figure when shot with light. Moisture content reads exactly 6.2%.</p>
+            </div>
+
+            <div class="tracker-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--clr-border); padding-bottom: 1rem;">
+                    <div>
+                        <span class="section-label" style="font-size: 0.8rem;">RESERVED SLAB #A-108</span>
+                        <h3 style="margin-top: 0.5rem;">Honduran Mahogany (Body Core)</h3>
+                    </div>
+                    <button class="btn btn-primary">Approve Final Lock</button>
+                </div>
+                <div style="width: 100%; height: 300px; background: url('assets/wood_textures.png') bottom left / cover; border-radius: var(--radius-md);"></div>
+                <p class="body-text" style="margin-top: 1.5rem; color: var(--clr-text-sec);">Deep red density. Highly porous requiring grain filler before base coats. Extremely resonant and pairs geometrically perfect with the selected Maple top.</p>
+                <div style="margin-top: 1rem; padding: 1rem; background: var(--clr-surface-offset); border-left: 3px solid var(--clr-primary);">
+                    <strong>Luthier Note:</strong> Waiting on your approval to make the first router cut. Once approved, this wood is locked to your build.
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
