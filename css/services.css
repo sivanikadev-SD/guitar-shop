@@ -102,17 +102,22 @@
     max-width: 650px;
     padding: 2rem;
     animation: fadeUp 0.9s ease forwards;
+    display: flex;
+    flex-direction: column;
 }
 
 .srv-hero__title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
     font-weight: 700;
     color: #fff;
     line-height: 1.1;
     margin-bottom: 1rem;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    text-shadow: none;
     letter-spacing: -0.02em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .srv-hero__subtitle {
@@ -121,7 +126,7 @@
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 2.5rem;
     line-height: 1.6;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    text-shadow: none;
 }
 
 .srv-hero__cta {
@@ -554,17 +559,23 @@
    ============================================================ */
 @media (max-width: 480px) {
     .srv-hero { padding-top: 70px; }
-    .srv-hero__content { padding: 1.5rem; }
-    .srv-section-title { font-size: 1.6rem; }
-    .srv-section-subtitle { font-size: 1rem; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .srv-hero__content { padding: 1.5rem; text-align: center; align-items: center; justify-content: center; width: 100%; margin: 0 auto; }
+    .srv-hero__cta { justify-content: center; }
+    .srv-section-title { font-size: 1.6rem; word-break: break-word; text-align: center; }
+    .srv-hero__title { font-size: clamp(1.6rem, 8vw, 2.3rem); }
+    .srv-section-subtitle { font-size: 1rem; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; }
     .srv-section-subtitle::after { display: none; }
+
+    .srv-expertise__title { flex-direction: column; gap: 0.5rem; font-size: 2rem; }
+    .srv-expertise__title::before, .srv-expertise__title::after { display: none; }
+    .srv-expertise__header { text-align: center; }
 
     .srv-cards-grid { grid-template-columns: 1fr; gap: 1rem; }
     .srv-card { padding: 1.5rem; }
 
     .srv-float-list { grid-template-columns: 1fr; }
-    .srv-hardware__titleline { flex-direction: column; align-items: flex-start; }
+    .srv-hardware__titleline { flex-direction: column; align-items: center; text-align: center; }
     .srv-hardware__titleline::after { display: none; }
 
-    .srv-checks li { font-size: 0.88rem; }
+    .srv-checks li { font-size: 0.88rem; justify-content: center; text-align: center; }
 }
