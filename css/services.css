@@ -198,13 +198,13 @@
 
 .srv-expertise__grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
 @media (min-width: 600px) {
     .srv-expertise__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -528,7 +528,7 @@
 @media (max-width: 1024px) {
     .srv-hero__content { max-width: 600px; }
     .srv-expertise__grid,
-    .srv-hardware__grid { grid-template-columns: 1fr; gap: 2rem; }
+    .srv-hardware__grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .srv-cards-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -541,7 +541,7 @@
     .srv-section-title { font-size: 1.9rem; }
 
     .srv-expertise { padding: 3rem 0; }
-    .srv-expertise__grid { grid-template-columns: 1fr; }
+    .srv-expertise__grid { grid-template-columns: repeat(1, 1fr); }
     .srv-expertise__image { height: 240px; }
 
     .srv-cards-grid { grid-template-columns: 1fr; }

@@ -347,7 +347,7 @@
     font-family: var(--font-heading);
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--clr-walnut);
+    color: var(--clr-primary);
     margin-bottom: 0.5rem;
 }
 
@@ -576,7 +576,12 @@
     .woods-filter-btn { padding: 0.6rem 1rem; font-size: 0.82rem; }
 
     .woods-vault { padding: 3rem 0; }
-    .woods-grid { grid-template-columns: repeat(2, 1fr); }
+    .woods-grid { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    .wood-card { grid-column: span 2; }
+    .wood-card:last-child:nth-child(odd) { grid-column: 2 / span 2; }
 
     .woods-about { padding: 3rem 0 4rem; }
     .woods-about__grid { grid-template-columns: 1fr; }
@@ -599,6 +604,7 @@
     .woods-filter-btn { flex: 1; text-align: center; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
     .woods-grid { grid-template-columns: 1fr; }
+    .wood-card, .wood-card:last-child:nth-child(odd) { grid-column: auto; }
     .wood-card__texture { height: 180px; }
 
     .woods-about__features { grid-template-columns: 1fr; }

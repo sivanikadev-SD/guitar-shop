@@ -403,21 +403,36 @@ img {
     margin: 0 auto;
 }
 
-.text-center { text-align: center; }
-.text-white { color: #fff !important; }
-.center-max { max-width: 600px; margin-left: auto; margin-right: auto; }
-.p-relative { position: relative; }
-
 .section-spacing {
-    padding: 4rem 0;
-    text-align: justify;
+    padding: 6rem 0;
+}
 
+.text-center { text-align: center !important; }
+
+/* Generic Card Utility */
+.card {
+    background: var(--clr-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--clr-primary);
 }
 
 .bg-offset {
     background-color: var(--clr-surface-offset);
 }
-
+.text-white{
+    color: #fff !important;
+}
 .section-label {
     display: block;
     font-family: var(--font-subheading);
@@ -428,7 +443,9 @@ img {
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
-
+/* .section-title{
+    color: var(--clr-amber);
+} */
 /* ==================================
    BUTTONS
    ================================== */
@@ -988,8 +1005,13 @@ img {
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-3 > *:last-child:nth-child(odd) {
+        grid-column: auto;
+        max-width: none;
+        margin: 0;
+    }
     .grid-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
