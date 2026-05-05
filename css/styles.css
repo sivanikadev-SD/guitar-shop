@@ -552,6 +552,48 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.8rem;
+}
+
+.nav-btn-text {
+    font-family: var(--font-subheading);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--clr-text);
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 100px;
+    transition: var(--transition);
+}
+
+.nav-btn-text:hover {
+    color: var(--clr-primary);
+}
+
+.nav-btn-primary {
+    font-family: var(--font-subheading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--clr-primary);
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 100px;
+    transition: var(--transition);
+}
+
+.nav-btn-primary:hover {
+    background: var(--clr-text);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .nav-btn-primary {
+    color: var(--clr-dark-bg);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .brand-logo {
