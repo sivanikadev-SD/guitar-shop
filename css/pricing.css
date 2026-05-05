@@ -3,7 +3,7 @@
 /* Hero Section */
 .pricing-hero {
     position: relative;
-    padding: 180px 0 300px; /* Space for navbar at top, and overlapping cards at bottom */
+    padding: 160px 0 240px; /* Reduced to balance overlap better */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +57,7 @@
 /* Pricing Cards */
 .pricing-cards-section {
     position: relative;
-    margin-top: -220px; /* Overlap the hero deeply */
+    margin-top: -160px; /* Adjusted overlap to match refined hero padding */
     z-index: 5;
     padding-bottom: 6rem;
 }
@@ -101,6 +101,7 @@
     margin-bottom: 1.5rem;
     color: #2b1f1a;
     font-family: var(--font-heading);
+    line-height: 1.2; /* Explicit line-height */
 }
 
 .p-price {
@@ -178,10 +179,12 @@
 /* Pro Card specific styling */
 .p-card.pro-card {
     background-color: #fdfbf7;
-    transform: scale(1.05); /* slightly bigger */
+    /* Removed scale(1.05) to ensure perfect vertical alignment of content across cards */
     z-index: 2;
     padding: 0;
     box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
 }
 
 .p-card.pro-card .p-header {
@@ -198,6 +201,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
+    line-height: 1.2; /* Same line-height as regular h2 */
 }
 
 .p-card.pro-card .badge {
@@ -218,7 +222,7 @@
 }
 
 .p-card.pro-card .p-price {
-    padding-top: 2rem;
+    padding-top: 0; /* Align with standard card's internal layout */
     border-bottom: none;
     padding-bottom: 1.5rem;
 }

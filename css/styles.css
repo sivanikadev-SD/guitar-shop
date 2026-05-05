@@ -401,6 +401,7 @@ img {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1.5rem; /* Standardized side padding */
 }
 
 .section-spacing {
@@ -432,6 +433,9 @@ img {
 }
 .text-white{
     color: #fff !important;
+}
+.text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .section-label {
     display: block;
@@ -525,10 +529,14 @@ img {
     z-index: 1000;
     padding: 1rem 0;
     transition: var(--transition);
+    background-color: #ffffff; /* Solid white for clarity in light mode */
+    border-bottom: 1px solid var(--clr-border);
+}
+
+[data-theme="dark"] .navbar {
     background-color: rgba(var(--clr-bg-rgb), 0.8);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--clr-border);
 }
 
 .navbar.scrolled {
@@ -854,7 +862,7 @@ img {
     gap: 0.5rem;
 }
 
-.theme-toggle, .mobile-menu-toggle {
+.theme-toggle, .mobile-menu-toggle, .rtl-toggle {
     background: none;
     border: 1px solid var(--clr-border);
     border-radius: 50%;
@@ -866,6 +874,14 @@ img {
     cursor: pointer;
     color: var(--clr-text);
     transition: var(--transition);
+    padding: 0; /* Clear inline padding */
+    font-size: 1.1rem;
+}
+
+.rtl-toggle {
+    font-family: var(--font-subheading);
+    font-weight: bold;
+    font-size: 0.75rem;
 }
 
 .theme-toggle:hover, .mobile-menu-toggle:hover {
@@ -1572,7 +1588,7 @@ img {
 @media (max-width: 1024px) {
     h1 { font-size: 2.8rem; }
     h2 { font-size: 1.8rem; }
-    .container { width: 92%; }
+    .container { width: 92%; padding: 0 1.25rem; }
     .section-spacing { padding: 3rem 0; }
 
     /* Navbar — hide links, show hamburger */
@@ -1589,7 +1605,7 @@ img {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.6rem; }
     h3 { font-size: 1.2rem; }
-    .container { width: 96%; }
+    .container { width: 94%; padding: 0 1rem; }
 
     .nav-container { padding: 0 1rem; }
     .brand-logo { font-size: 1rem; }

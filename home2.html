@@ -31,16 +31,11 @@
                 <a href="portfolio.html">Portfolio</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
-                <a href="dashboard.html" class="nav-dashboard">Dashboard</a>
             </nav>
             <div class="nav-actions">
-                <button class="rtl-toggle" aria-label="Toggle RTL" style="background:none;border:1px solid var(--clr-border);border-radius:var(--radius-sm);padding:0.4rem;cursor:pointer;color:var(--clr-text);font-family:var(--font-subheading);font-weight:bold;font-size:0.8rem;">RTL</button>
-                <button class="theme-toggle" id="themeToggle"><i class="ph ph-moon"></i></button>
-                <div class="cta-group">
-                    <a href="login.html" class="btn btn-outline" style="border-color:transparent;">Login</a>
-                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
-                </div>
-                <button class="mobile-menu-toggle"><i class="ph ph-list"></i></button>
+                <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu"><i class="ph ph-list"></i></button>
             </div>
         </div>
     </header>
@@ -177,25 +172,29 @@
         </section>
 
         <!-- 7. Pricing Intro Banner -->
-        <section class="section-spacing text-center" style="background: url('assets/hero_guitar.png'); background-position: center 30%; background-size: cover; position: relative; padding: 8rem 0; margin-top: 4rem; height: 100%;">
-            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(0deg, rgba(0,0,0,0.9), rgba(20,10,0,0.6));"></div>
-            <div class="container p-relative" style="z-index: 2; max-width: 800px;">
-                <h2 class="section-title" style="margin-bottom: 1.5rem; color: var(--clr-amber);">Accessible Excellence</h2>
-                <p class="body-text" style="font-size: 1.2rem; margin-bottom: 1rem; color:#fff;">Boutique quality shouldn't require a second mortgage. We offer transparently tiered builds starting at $2,500.</p>
-                <p class="body-text" style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 3rem; color:#a1a1aa;">Through our proprietary financing partners, you can secure entirely interest-free payment plans spread across 36 months, allowing you to pay as you play.</p>
-                <a href="pricing.html" class="btn btn-primary btn-large" style="background: var(--clr-amber); color:var(--clr-walnut); border-color: var(--clr-amber);">Examine Pricing Structures</a>
-            </div>
+        <section class="section-spacing text-center" style="background: url('assets/hero_guitar.png'); background-position: center 30%; background-size: cover; position: relative; padding: 10rem 0; margin-top: 4rem;">
+            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4);"></div>
+            <div class="container p-relative" style="z-index: 5; max-width: 900px;">
+                <div style="background: rgba(20, 10, 5, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 4rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    <h2 class="section-title" style="margin-bottom: 1.5rem; color: var(--clr-amber); font-size: clamp(2.5rem, 8vw, 4rem); text-transform: uppercase; letter-spacing: 0.1em; text-shadow: none;">Accessible Excellence</h2>
+                    <p class="body-text text-white" style="font-size: 1.4rem; margin-bottom: 1.5rem; opacity: 1; font-weight: 500;">Boutique quality shouldn't require a second mortgage. We offer transparently tiered builds starting at $2,500.</p>
+                    <p class="body-text" style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 3.5rem; color: #e5e7eb;">Through our proprietary financing partners, you can secure entirely interest-free payment plans spread across 36 months, allowing you to pay as you play.</p>
+                    <div class="text-center">
+                        <a href="pricing.html" class="btn btn-primary btn-large" style="background: var(--clr-amber); color:#1a110e; border: none; font-weight: 800; padding: 1.2rem 3.5rem;">Examine Pricing Structures</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 8. Final Full Screen CTA -->
-        <section class="final-cta" style="padding: 8rem 0; background:var(--clr-secondary)">
-            <div class="container text-center split-text p-relative">
-                <span class="section-label" style="opacity: 0.8; margin-bottom: 1rem;">THE NEXT STEP</span>
-                <h2 class="section-title" style="margin-bottom: 2rem;">Start Building Your Dream Guitar Today</h2>
-                <p class="body-text text-white center-max" style="font-size: 1.3rem; margin-bottom: 3.5rem; opacity: 0.9;">Join the elite tier of musicians who refuse to compromise on their instrument. Create an account to begin mocking up your signature tone.</p>
+        <section class="home-cta" style="background: var(--clr-walnut); padding: 8rem 0; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background-image: url('assets/wood_textures.png'); opacity: 0.1; mix-blend-mode: overlay;"></div>
+        <div class="container text-center split-text p-relative" style="position: relative; z-index: 2;">
+                <span class="section-label text-shadow-sm" style="color: #fff; opacity: 0.9; margin-bottom: 1rem;">THE NEXT STEP</span>
+                <h2 class="section-title text-shadow-sm" style="margin-bottom: 2rem; color: #fff; font-size: 3.5rem;">Start Building Your Dream Guitar Today</h2>
+                <p class="body-text text-white text-shadow-sm center-max" style="font-size: 1.4rem; margin-bottom: 3.5rem; opacity: 1; max-width: 800px; margin-left: auto; margin-right: auto;">Join the elite tier of musicians who refuse to compromise on their instrument. Create an account to begin mocking up your signature tone.</p>
                 <div>
-                    <a href="signup.html" class="btn btn-outline btn-large" style="color: #fff; border-color: #fff; background: rgba(255,255,255,0.05); padding: 1.2rem 3rem;">Enter the Workshop System <i class="ph ph-arrow-right"></i></a>
+                    <a href="signup.html" class="btn btn-primary btn-large" style="background: var(--clr-amber); color: #1a110e; border-color: var(--clr-amber); padding: 1.2rem 3.5rem; font-weight: 800;">Enter the Workshop System <i class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -252,14 +251,8 @@
                 <a href="portfolio.html"><i class="ph ph-images"></i> Portfolio</a>
                 <a href="pricing.html"><i class="ph ph-tag"></i> Pricing</a>
                 <a href="contact.html"><i class="ph ph-envelope"></i> Contact</a>
-                <div class="mobile-drawer__divider"></div>
-                <a href="dashboard.html" class="nav-dashboard"><i class="ph ph-layout"></i> Dashboard</a>
             </nav>
             <div class="mobile-drawer__footer">
-                <div class="mobile-drawer__auth">
-                    <a href="login.html" class="btn btn-outline">Login</a>
-                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
-                </div>
                 <div class="mobile-drawer__controls">
                     <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
                     <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>

@@ -220,33 +220,33 @@
 }
 
 .port-test-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: stretch;
 }
 
-@media (min-width: 900px) {
-    .port-test-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+/* Remove old static grid columns */
 
 .port-test-card {
+    flex: 1 1 350px;
+    max-width: 400px;
     background: #f7ede2;
-    /* Light cream to match reference */
     border-radius: var(--radius-sm);
     overflow: hidden;
     color: #332;
     display: flex;
     flex-direction: column;
+    transition: var(--transition);
 }
 
 .port-test-card__img {
     height: 280px;
     width: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center; /* Better than 'top' for centered alignment */
     background: #4B2E2B;
 }
 
@@ -380,26 +380,17 @@
         width: 100%;
     }
 
-    .port-test-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
+    /* Removed grid overrides to allow flexbox behavior */
 
-    .port-test-card {
-        grid-column: span 2;
-    }
-
-    .port-test-card:last-child:nth-child(odd) {
-        grid-column: 2 / span 2;
-    }
 
     .port-test-card {
         flex-direction: column;
     }
 
-    .port-test-card__image {
+    .port-test-card__img {
         width: 100%;
-        height: 200px;
+        height: 380px; /* Increased height to prevent face cropping on tablets */
+        object-position: center top;
     }
 
     .port-cta {
@@ -451,16 +442,17 @@
     }
 
     .port-test-grid {
-        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .port-test-card {
         flex-direction: column;
     }
 
-    .port-test-card__image {
+    .port-test-card__img {
         width: 100%;
-        height: 160px;
+        height: 300px; /* Increased height for better framing on mobile */
+        object-position: center top;
     }
 
     .port-cta__desc {

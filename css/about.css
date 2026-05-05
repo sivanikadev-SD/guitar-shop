@@ -310,7 +310,8 @@
 .about-values__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 4.5rem; /* Increased spacing between title and cards */
 }
 
 @media (min-width: 768px) {
@@ -331,8 +332,9 @@
 
 .about-value-card__image {
     width: 100%;
-    height: 200px;
+    height: 250px; /* Increased height for better framing */
     object-fit: cover;
+    object-position: center top; /* Focus on subjects' faces/tops */
 }
 
 .about-value-card__content {
