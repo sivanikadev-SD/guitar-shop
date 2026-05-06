@@ -70,7 +70,7 @@
 /* Contact Info Cards */
 .contact-info-section {
     position: relative;
-    margin-top: -60px; /* Overlap the hero slightly */
+    margin-top: 3rem; /* Increased space from the hero section */
     z-index: 10;
     padding-bottom: 3rem;
 }
@@ -525,7 +525,7 @@
     .info-cards-wrapper { flex-direction: column; }
     .split-form-wrapper { flex-direction: column; }
     .split-image-container { min-height: 300px; }
-    .contact-info-section { margin-top: -40px; }
+    .contact-info-section { margin-top: 1.5rem; }
     .c-map-card {
         position: static;
         transform: none;
@@ -567,7 +567,7 @@
     .contact-hero { padding: 100px 0 80px; }
     .contact-hero-content h1 { font-size: 1.9rem; }
     .contact-hero-content p { font-size: 0.9rem; }
-    .contact-info-section { margin-top: -20px; }
+    .contact-info-section { margin-top: 1rem; }
 
     .c-info-card { flex-direction: column; text-align: center; gap: 0.8rem; padding: 1.5rem; }
     .c-info-card i { font-size: 2rem; }
