@@ -14,8 +14,12 @@
 .pricing-hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('../assets/hero_guitar.png'); /* Good fallback since image gen failed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/hero_guitar.png');
+    /* Good fallback since image gen failed */
     background-size: cover;
     background-position: center 30%;
     opacity: 0.8;
@@ -25,7 +29,10 @@
 .pricing-hero::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(to bottom, rgba(38, 22, 18, 0.6) 0%, rgba(38, 22, 18, 0.9) 100%);
     z-index: -1;
 }
@@ -72,15 +79,17 @@
 }
 
 .p-card {
-    background-color: #f6efe8; /* Dirty warm cream */
+    background-color: #f6efe8;
+    /* Dirty warm cream */
     border-radius: 2px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     width: 32%;
     padding: 2.5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    color: #1a110e; /* Solid dark text for contrast */
+    color: #1a110e;
+    /* Solid dark text for contrast */
     display: flex;
     flex-direction: column;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -89,20 +98,32 @@
     animation: cardEntrance 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.pricing-cards-wrapper .p-card:nth-child(1) { animation-delay: 0.1s; }
-.pricing-cards-wrapper .p-card:nth-child(2) { animation-delay: 0.25s; }
-.pricing-cards-wrapper .p-card:nth-child(3) { animation-delay: 0.4s; }
+.pricing-cards-wrapper .p-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.pricing-cards-wrapper .p-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.pricing-cards-wrapper .p-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
 
 .p-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-    background-color: #faf7f2; /* Subtle brighten instead of pure white */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    background-color: #faf7f2;
+    /* Subtle brighten instead of pure white */
 }
 
 .p-card::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../assets/wood_textures.png');
     background-size: cover;
     opacity: 0.03;
@@ -113,9 +134,11 @@
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
-    color: #1a110e; /* Ensure dark header text */
+    color: #1a110e;
+    /* Ensure dark header text */
     font-family: var(--font-heading);
-    line-height: 1.2; /* Explicit line-height */
+    line-height: 1.2;
+    /* Explicit line-height */
 }
 
 .p-price {
@@ -124,7 +147,7 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-bottom: 2rem;
 }
 
@@ -161,7 +184,8 @@
     gap: 0.8rem;
     margin-bottom: 1.2rem;
     font-size: 0.9rem;
-    color: #2b1f1a; /* Darker text for better contrast */
+    color: #2b1f1a;
+    /* Darker text for better contrast */
     font-family: var(--font-subheading);
 }
 
@@ -187,7 +211,7 @@
 .p-btn:hover {
     background: #1a110e;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Pro Card specific styling */
@@ -196,18 +220,18 @@
     /* Removed scale(1.05) to ensure perfect vertical alignment of content across cards */
     z-index: 2;
     padding: 0;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
 }
 
 .p-card.pro-card:hover {
     transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
 }
 
 .p-card.pro-card .p-header {
-    background: linear-gradient(180deg, rgba(31,20,16,1) 0%, rgba(135,76,46,1) 100%);
+    background: linear-gradient(180deg, rgba(31, 20, 16, 1) 0%, rgba(135, 76, 46, 1) 100%);
     color: #fff;
     padding: 2.5rem 0 1.5rem;
     position: relative;
@@ -220,7 +244,8 @@
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    line-height: 1.2; /* Same line-height as regular h2 */
+    line-height: 1.2;
+    /* Same line-height as regular h2 */
 }
 
 .p-card.pro-card .badge {
@@ -241,7 +266,8 @@
 }
 
 .p-card.pro-card .p-price {
-    padding-top: 0; /* Remove padding to match Basic/Masterpiece alignment */
+    padding-top: 0;
+    /* Remove padding to match Basic/Masterpiece alignment */
     border-bottom: none;
     padding-bottom: 1.5rem;
 }
@@ -275,9 +301,13 @@
 .dark-texture-section::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     /* Let's try multiple backgrounds for a grunge effect */
-    background-image: url('../assets/wood_textures.png'); /* grunge texture */
+    background-image: url('../assets/wood_textures.png');
+    /* grunge texture */
     background-size: cover;
     mix-blend-mode: overlay;
     opacity: 0.3;
@@ -308,7 +338,8 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 0; /* Flush according to image */
+    gap: 0;
+    /* Flush according to image */
     background: transparent;
     border-radius: 2px;
 }
@@ -323,8 +354,10 @@
 }
 
 .faq-item.active {
-    background: #fdfbf7; /* Slightly brighter cream for active state */
-    color: #1a110e; /* Stronger dark text */
+    background: #fdfbf7;
+    /* Slightly brighter cream for active state */
+    color: #1a110e;
+    /* Stronger dark text */
 }
 
 .faq-question {
@@ -367,7 +400,8 @@
 .faq-answer-inner {
     padding: 0 2rem 1.8rem;
     font-size: 0.95rem;
-    color: #2b1f1a; /* Opaque dark text for maximum contrast */
+    color: #2b1f1a;
+    /* Opaque dark text for maximum contrast */
     line-height: 1.6;
 }
 
@@ -419,17 +453,22 @@
 
 .p-footer-logo {
     display: inline-block;
-    width: 36px; height: 36px;
+    width: 36px;
+    height: 36px;
     border: 1px solid rgba(140, 131, 122, 0.4);
     border-radius: 50% 50% 10px 10px;
     margin-bottom: 2rem;
     position: relative;
 }
+
 .p-footer-logo::after {
     content: '';
     position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: 0; height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 10px solid #8c837a;
@@ -479,59 +518,145 @@
 }
 
 @media (max-width: 1024px) {
-    .pricing-cards-wrapper { flex-direction: column; align-items: center; }
-    .p-card, .p-card.pro-card { transform: scale(1); width: 100%; max-width: 450px; }
-    .pricing-cards-section { margin-top: -110px; }
-    .pricing-hero { padding-bottom: 190px; }
-    .p-card.pro-card .p-price { padding-top: 0; }
+    .pricing-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p-card,
+    .p-card.pro-card {
+        transform: scale(1);
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .pricing-cards-section {
+        margin-top: -110px;
+    }
+
+    .pricing-hero {
+        padding-bottom: 190px;
+    }
+
+    .p-card.pro-card .p-price {
+        padding-top: 0;
+    }
 }
 
 /* ============================================================
    RESPONSIVE — 768px (Tablet)
    ============================================================ */
 @media (max-width: 768px) {
-    .pricing-hero { padding: 130px 0 180px; }
-    .pricing-hero-content h1 { font-size: 2.5rem; }
-    .pricing-hero-content p { font-size: 1rem; }
+    .pricing-hero {
+        padding: 130px 0 180px;
+    }
 
-    .pricing-cards-section { margin-top: -100px; }
-    .pricing-cards-wrapper { padding: 0 1rem; }
-    .p-card { max-width: 100%; }
+    .pricing-hero-content h1 {
+        font-size: 2.5rem;
+    }
 
-    .section-title { font-size: 1.8rem; }
-    .faq-question { padding: 1.2rem 1.5rem; font-size: 0.95rem; }
+    .pricing-hero-content p {
+        font-size: 1rem;
+    }
 
-    .cta-section { padding: 5rem 0; }
+    .pricing-cards-section {
+        margin-top: -100px;
+    }
+
+    .pricing-cards-wrapper {
+        padding: 0 1rem;
+    }
+
+    .p-card {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .faq-question {
+        padding: 1.2rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .cta-section {
+        padding: 5rem 0;
+    }
 }
 
 /* ============================================================
    RESPONSIVE — 480px (Mobile)
    ============================================================ */
 @media (max-width: 480px) {
-    .pricing-hero { padding: 100px 0 160px; }
-    .pricing-hero-content h1 { font-size: 1.9rem; }
-    .pricing-hero-content p { font-size: 0.9rem; }
+    .pricing-hero {
+        padding: 100px 0 160px;
+    }
 
-    .pricing-cards-section { margin-top: -80px; }
-    .p-card { padding: 1.5rem; }
-    .p-card .p-header h2 { font-size: 1.7rem; }
-    .p-price .amount { font-size: 3rem; }
+    .pricing-hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .pricing-hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .pricing-cards-section {
+        margin-top: -80px;
+    }
+
+    .p-card {
+        padding: 1.5rem;
+    }
+
+    .p-card .p-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .p-price .amount {
+        font-size: 3rem;
+    }
+
     .p-card.pro-card .p-price,
     .p-card.pro-card .p-features,
-    .p-card.pro-card .p-cta { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .p-card.pro-card .p-cta {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 
-    .section-title { font-size: 1.4rem; flex-direction: column; gap: 0.5rem; }
-    .section-title::before, .section-title::after { width: 40px; }
-    .faq-question { padding: 1rem; font-size: 0.88rem; }
+    .section-title {
+        font-size: 1.4rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-    .p-cta-btn { width: 100%; justify-content: center; padding: 1rem 1.5rem; }
-    .cta-section { padding: 4rem 0; }
+    .section-title::before,
+    .section-title::after {
+        width: 40px;
+    }
+
+    .faq-question {
+        padding: 1rem;
+        font-size: 0.88rem;
+    }
+
+    .p-cta-btn {
+        width: 90%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .cta-section {
+        padding: 4rem 0;
+    }
 }
+
 @keyframes cardEntrance {
     from {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
