@@ -3,7 +3,7 @@
 /* Hero Section */
 .pricing-hero {
     position: relative;
-    padding: 160px 0 240px; /* Reduced to balance overlap better */
+    padding: 160px 0 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +57,7 @@
 /* Pricing Cards */
 .pricing-cards-section {
     position: relative;
-    margin-top: -160px; /* Adjusted overlap to match refined hero padding */
+    margin-top: -140px;
     z-index: 5;
     padding-bottom: 6rem;
 }
@@ -83,6 +83,20 @@
     color: #2b1f1a;
     display: flex;
     flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Entrance Animation */
+    opacity: 0;
+    animation: cardEntrance 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.pricing-cards-wrapper .p-card:nth-child(1) { animation-delay: 0.1s; }
+.pricing-cards-wrapper .p-card:nth-child(2) { animation-delay: 0.25s; }
+.pricing-cards-wrapper .p-card:nth-child(3) { animation-delay: 0.4s; }
+
+.p-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    background-color: #fff; /* Slight brighten on hover */
 }
 
 .p-card::after {
@@ -187,6 +201,11 @@
     flex-direction: column;
 }
 
+.p-card.pro-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+}
+
 .p-card.pro-card .p-header {
     background: linear-gradient(180deg, rgba(31,20,16,1) 0%, rgba(135,76,46,1) 100%);
     color: #fff;
@@ -222,7 +241,7 @@
 }
 
 .p-card.pro-card .p-price {
-    padding-top: 0; /* Align with standard card's internal layout */
+    padding-top: 0; /* Remove padding to match Basic/Masterpiece alignment */
     border-bottom: none;
     padding-bottom: 1.5rem;
 }
@@ -354,11 +373,16 @@
 
 /* CTA Section specific */
 .cta-section {
-    padding: 8rem 0;
+    padding: 8rem 0 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.cta-section .section-title {
+    margin-top: 5rem;
+    margin-bottom: 0;
 }
 
 .p-cta-btn {
@@ -457,8 +481,9 @@
 @media (max-width: 1024px) {
     .pricing-cards-wrapper { flex-direction: column; align-items: center; }
     .p-card, .p-card.pro-card { transform: scale(1); width: 100%; max-width: 450px; }
-    .pricing-cards-section { margin-top: -120px; }
-    .pricing-hero { padding-bottom: 200px; }
+    .pricing-cards-section { margin-top: -110px; }
+    .pricing-hero { padding-bottom: 190px; }
+    .p-card.pro-card .p-price { padding-top: 0; }
 }
 
 /* ============================================================
@@ -501,4 +526,14 @@
 
     .p-cta-btn { width: 100%; justify-content: center; padding: 1rem 1.5rem; }
     .cta-section { padding: 4rem 0; }
+}
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
