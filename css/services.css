@@ -44,7 +44,7 @@
 
 .srv-checks li {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Changed from center for better multi-line alignment */
     gap: 0.8rem;
     font-family: var(--font-body);
     font-size: 0.95rem;
@@ -514,6 +514,12 @@
     background: var(--clr-dark-surface);
 }
 
+[data-theme="dark"] .btn-primary[style*="var(--clr-walnut)"] {
+    background: var(--clr-primary) !important;
+    color: var(--clr-dark-bg) !important;
+    border-color: var(--clr-primary) !important;
+}
+
 /* ============================================================
    ANIMATIONS
    ============================================================ */
@@ -577,5 +583,6 @@
     .srv-hardware__titleline { flex-direction: column; align-items: center; text-align: center; }
     .srv-hardware__titleline::after { display: none; }
 
-    .srv-checks li { font-size: 0.88rem; justify-content: center; text-align: center; }
+    .srv-checks li { font-size: 0.88rem; justify-content: flex-start; text-align: left; align-items: flex-start; }
+    [dir="rtl"] .srv-checks li { justify-content: flex-start; text-align: right; align-items: flex-start; }
 }

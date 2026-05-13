@@ -18,8 +18,8 @@
     --clr-dark-bg: rgb(var(--clr-dark-bg-rgb));
     --clr-dark-surface: #222222;
     --clr-dark-surface-offset: #1a1a1a;
-    --clr-dark-text: #f5f5f5;
-    --clr-dark-text-sec: #a0a0a0;
+    --clr-dark-text: #fdfbf7;
+    --clr-dark-text-sec: #b0b0b0; /* Brightened for better contrast */
     --clr-dark-border: rgba(255, 255, 255, 0.08);
 
     /* Fonts */
@@ -2864,8 +2864,8 @@ section, main, footer, header {
 
     .container {
         width: 100%;
-        padding-left: 0.875rem;
-        padding-right: 0.875rem;
+        padding-left: 1.25rem; /* Increased from 0.875rem */
+        padding-right: 1.25rem; /* Increased from 0.875rem */
     }
 
     h1 { font-size: 1.7rem; }

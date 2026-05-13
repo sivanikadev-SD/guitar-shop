@@ -80,7 +80,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    color: #2b1f1a;
+    color: #1a110e; /* Solid dark text for contrast */
     display: flex;
     flex-direction: column;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -96,7 +96,7 @@
 .p-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-    background-color: #fff; /* Slight brighten on hover */
+    background-color: #faf7f2; /* Subtle brighten instead of pure white */
 }
 
 .p-card::after {
@@ -113,7 +113,7 @@
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
-    color: #2b1f1a;
+    color: #1a110e; /* Ensure dark header text */
     font-family: var(--font-heading);
     line-height: 1.2; /* Explicit line-height */
 }
@@ -161,7 +161,7 @@
     gap: 0.8rem;
     margin-bottom: 1.2rem;
     font-size: 0.9rem;
-    color: rgba(43, 31, 26, 0.8);
+    color: #2b1f1a; /* Darker text for better contrast */
     font-family: var(--font-subheading);
 }
 
@@ -323,8 +323,8 @@
 }
 
 .faq-item.active {
-    background: #e6dfd6;
-    color: #2b1f1a;
+    background: #fdfbf7; /* Slightly brighter cream for active state */
+    color: #1a110e; /* Stronger dark text */
 }
 
 .faq-question {
@@ -367,7 +367,7 @@
 .faq-answer-inner {
     padding: 0 2rem 1.8rem;
     font-size: 0.95rem;
-    color: rgba(43, 31, 26, 0.85);
+    color: #2b1f1a; /* Opaque dark text for maximum contrast */
     line-height: 1.6;
 }
 
@@ -536,4 +536,31 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Dark Mode visibility overrides */
+[data-theme="dark"] .p-card:hover,
+[data-theme="dark"] .p-card:hover .p-header h2,
+[data-theme="dark"] .p-card:hover .p-price,
+[data-theme="dark"] .p-card:hover .p-price .amount,
+[data-theme="dark"] .p-card:hover .p-price .currency,
+[data-theme="dark"] .p-card:hover .p-features li {
+    color: #1a110e !important;
+}
+
+[data-theme="dark"] .p-card:hover .p-price .period {
+    color: rgba(26, 17, 14, 0.7) !important;
+}
+
+[data-theme="dark"] .p-card:hover .p-features li i {
+    color: #a85834 !important;
+}
+
+/* FAQ Dark Mode Overrides */
+[data-theme="dark"] .faq-item.active,
+[data-theme="dark"] .faq-item.active .faq-question,
+[data-theme="dark"] .faq-item.active .faq-answer-inner,
+[data-theme="dark"] .faq-item.active .faq-answer-inner p,
+[data-theme="dark"] .faq-item.active .faq-answer-inner strong {
+    color: #1a110e !important;
 }

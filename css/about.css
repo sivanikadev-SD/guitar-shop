@@ -675,22 +675,19 @@
 /* ============================================================
    RESPONSIVE — 480px (Mobile)
    ============================================================ */
-@media (max-width: 480px) {
-    .about-hero { padding-top: 70px; }
-    .about-hero__title { font-size: 1.9rem; }
-    .about-hero__badge { font-size: 0.75rem; }
-    .about-hero__cta { flex-direction: column; width: 100%; }
-    .about-hero__cta .btn { width: 100%; justify-content: center; }
+    .about-hero__content { padding: 1.5rem; text-align: center; align-items: center; width: 100%; }
+    .about-hero__cta { justify-content: center; }
 
-    .about-story__subtitle { font-size: 1rem; }
-    .about-story__title { font-size: 1.8rem; }
-    .about-story__badges { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
-    .about-story__badge { white-space: normal; font-size: 0.82rem; padding: 0.4rem 0.8rem; }
+    .about-story__subtitle { font-size: 1rem; justify-content: center; text-align: center; }
+    .about-story__subtitle::after { display: none; }
+    .about-story__title { font-size: 1.8rem; text-align: center; }
+    .about-story__text { text-align: center; }
+    .about-story__badges { justify-content: center; }
 
     .about-values__grid { grid-template-columns: 1fr; }
     .about-value-card { padding: 1.2rem; }
 
-    .about-section-title { font-size: 1.8rem; flex-direction: column; gap: 0.5rem; }
+    .about-section-title { font-size: 1.8rem; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center; }
     .about-section-title::before,
     .about-section-title::after { width: 40px; }
 
