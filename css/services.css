@@ -561,28 +561,33 @@
 }
 
 /* ============================================================
-   RESPONSIVE — 480px (Mobile)
+   RESPONSIVE — 360px (Mobile)
    ============================================================ */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .srv-hero { padding-top: 70px; }
     .srv-hero__content { padding: 1.5rem; text-align: center; align-items: center; justify-content: center; width: 100%; margin: 0 auto; }
-    .srv-hero__cta { justify-content: center; }
-    .srv-section-title { font-size: 1.6rem; word-break: break-word; text-align: center; }
-    .srv-hero__title { font-size: clamp(1.6rem, 8vw, 2.3rem); }
+    .srv-hero__title { font-size: 1.6rem !important; }
+    .srv-hero__cta { justify-content: center; width: 100%; }
+    .srv-hero__cta .btn { width: 100%; justify-content: center; }
+
+    .srv-section-title { font-size: 1.5rem !important; word-break: break-word; text-align: center; margin-bottom: 2rem; }
     .srv-section-subtitle { font-size: 1rem; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; }
     .srv-section-subtitle::after { display: none; }
 
-    .srv-expertise__title { flex-direction: column; gap: 0.5rem; font-size: 2rem; }
+    .srv-expertise { padding: 3.5rem 0; }
+    .srv-expertise__title { flex-direction: column; gap: 0.5rem; font-size: 1.8rem !important; }
     .srv-expertise__title::before, .srv-expertise__title::after { display: none; }
-    .srv-expertise__header { text-align: center; }
+    .srv-expertise__header { text-align: center; margin-bottom: 2rem; }
 
+    .srv-cards-section { padding: 3.5rem 0; }
     .srv-cards-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .srv-card { padding: 1.5rem; }
+    .srv-card { padding: 1.2rem; }
 
-    .srv-float-list { grid-template-columns: 1fr; }
-    .srv-hardware__titleline { flex-direction: column; align-items: center; text-align: center; }
+    .srv-hardware { padding: 3.5rem 0; }
+    .srv-hardware__titleline { flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .srv-hardware__titleline h2 { font-size: 1.6rem !important; }
     .srv-hardware__titleline::after { display: none; }
 
-    .srv-checks li { font-size: 0.88rem; justify-content: flex-start; text-align: left; align-items: flex-start; }
-    [dir="rtl"] .srv-checks li { justify-content: flex-start; text-align: right; align-items: flex-start; }
+    .srv-float-list { grid-template-columns: 1fr; gap: 0.8rem; }
+    .srv-checks li { font-size: 0.85rem; }
 }

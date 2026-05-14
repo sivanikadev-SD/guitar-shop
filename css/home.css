@@ -980,38 +980,43 @@
 }
 
 /* ============================================================
-   RESPONSIVE — 325px (Mobile)
+   RESPONSIVE — 360px (Mobile)
    ============================================================ */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .home-hero { padding-top: 70px; }
-    .home-hero__title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
-    .home-hero__subtitle { font-size: 0.9rem; }
-    .home-hero__stats { width: 100%; padding: 1rem; gap: 1rem; }
+    .home-hero__title { font-size: clamp(1.8rem, 8vw, 2.3rem); }
+    .home-hero__subtitle { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .home-hero__stats { width: 100%; padding: 1.2rem; gap: 0.8rem; }
     .home-hero__stat-number { font-size: 1.5rem; }
     .home-hero__stat-divider { width: 100%; height: 1px; }
     .home-hero__cta .btn { width: 100%; justify-content: center; }
 
-    .home-craft { padding: 3rem 0; }
+    .home-craft { padding: 3.5rem 1rem; }
     .home-craft__title { font-size: 1.6rem; }
-    .home-craft__badges { flex-direction: column; }
+    .home-craft__badges { flex-direction: column; gap: 0.6rem; }
 
-    .home-services__grid { grid-template-columns: 1fr; }
-    .home-svc-card { padding: 1rem; }
-    .home-svc-card__header { margin-bottom: 0.5rem; padding-bottom: 0.5rem; }
-    .home-svc-card__header i { font-size: 1.2rem; }
+    .home-services { padding: 3.5rem 1rem; }
+    .home-services__grid { grid-template-columns: 1fr; gap: 1rem; }
+    .home-svc-card { padding: 1.2rem; }
+    .home-svc-card__header { margin-bottom: 0.6rem; padding-bottom: 0.6rem; }
+    .home-svc-card__header i { font-size: 1.3rem; }
 
+    .home-woods { padding: 3.5rem 1rem; }
     .home-woods__grid { grid-template-columns: 1fr; }
     .home-wood-card, .home-wood-card:last-child:nth-child(odd) { grid-column: auto; }
-    .home-section-divider { flex-direction: column; }
+    .home-section-divider { flex-direction: column; gap: 0.5rem; }
     .home-section-divider__line { width: 60px; height: 1px; }
 
-    .home-process__steps { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .home-process { padding: 3.5rem 1rem; }
+    .home-process__steps { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
 
+    .home-portfolio { padding: 3.5rem 1rem; }
     .home-portfolio__gallery { grid-template-columns: 1fr; }
     .home-portfolio__item, .home-portfolio__item:last-child:nth-child(odd) { grid-column: auto; }
-    .home-portfolio__features { flex-direction: column; align-items: flex-start; }
+    .home-portfolio__features { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
 
-    .home-testimonials__grid { grid-template-columns: 1fr; }
+    .home-testimonials { padding: 3.5rem 1rem; }
+    .home-testimonials__grid { grid-template-columns: 1fr; gap: 1rem; }
 
-    .home-section-title { font-size: 1.8rem; }
+    .home-section-title { font-size: 1.7rem; margin-bottom: 2rem; }
 }

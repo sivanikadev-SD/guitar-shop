@@ -673,23 +673,32 @@
 }
 
 /* ============================================================
-   RESPONSIVE — 480px (Mobile)
+   RESPONSIVE — 360px (Mobile)
    ============================================================ */
+@media (max-width: 360px) {
     .about-hero__content { padding: 1.5rem; text-align: center; align-items: center; width: 100%; }
-    .about-hero__cta { justify-content: center; }
+    .about-hero__title { font-size: 1.6rem !important; }
+    .about-hero__cta { justify-content: center; width: 100%; }
+    .about-hero__cta .btn { width: 100%; justify-content: center; }
 
-    .about-story__subtitle { font-size: 1rem; justify-content: center; text-align: center; }
+    .about-story { padding: 3.5rem 0; }
+    .about-story__image-wrap { width: 100%; height: auto; aspect-ratio: 16/9; margin-bottom: 2rem; }
+    .about-story__subtitle { font-size: 1rem; justify-content: center; text-align: center; margin-bottom: 1rem; }
     .about-story__subtitle::after { display: none; }
-    .about-story__title { font-size: 1.8rem; text-align: center; }
-    .about-story__text { text-align: center; }
-    .about-story__badges { justify-content: center; }
+    .about-story__title { font-size: 1.7rem; text-align: center; margin-bottom: 1.2rem; }
+    .about-story__text { text-align: center; line-height: 1.6; }
+    .about-story__badges { justify-content: center; gap: 0.6rem; }
 
-    .about-values__grid { grid-template-columns: 1fr; }
-    .about-value-card { padding: 1.2rem; }
+    .about-features { padding: 3.5rem 0; }
+    .about-values__grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-value-card { padding: 0; } /* Remove padding to let image be full width if needed, or keep card style */
+    .about-value-card__image { height: 180px; width: 100%; object-fit: cover; }
+    .about-value-card__content { padding: 1.25rem; }
 
-    .about-section-title { font-size: 1.8rem; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center; }
+    .about-section-title { font-size: 1.6rem !important; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center; margin-bottom: 2rem; }
     .about-section-title::before,
-    .about-section-title::after { width: 40px; }
+    .about-section-title::after { width: 30px !important; }
 
-    .about-luthier-card__image { height: 220px; }
+    .about-luthier-card__image { height: 200px; width: 100%; object-fit: cover; }
+    .about-luthier-card__content { padding: 1.25rem; }
 }

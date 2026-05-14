@@ -610,20 +610,29 @@
 }
 
 /* ============================================================
-   RESPONSIVE — 480px (Mobile)
+   RESPONSIVE — 360px (Mobile)
    ============================================================ */
-@media (max-width: 480px) {
-    .woods-hero__title { font-size: 1.7rem; }
-    .woods-hero__filters { width: 100%; margin: 1rem 1rem 0; }
-    .woods-filter-btn { flex: 1; text-align: center; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+@media (max-width: 360px) {
+    .woods-hero { padding-bottom: 2rem; }
+    .woods-hero__title { font-size: 1.6rem !important; }
+    .woods-hero__desc { font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .woods-hero__filters { width: 90%; margin: 0; gap: 0.3rem; }
+    .woods-filter-btn { flex: 1; text-align: center; border-radius: var(--radius-sm); padding: 0.5rem; }
 
-    .woods-grid { grid-template-columns: 1fr; }
+    .woods-vault { padding: 3.5rem 0; }
+    .woods-grid { grid-template-columns: 1fr; gap: 1.2rem; }
     .wood-card, .wood-card:last-child:nth-child(odd) { grid-column: auto; }
-    .wood-card__texture { height: 180px; }
+    .wood-card__texture { height: 160px; }
+    .wood-card__content { padding: 1.2rem; }
 
-    .woods-about__features { grid-template-columns: 1fr; }
-    .woods-about__title { font-size: 1.6rem; }
+    .woods-about { padding: 3.5rem 0; }
+    .woods-about__features { grid-template-columns: 1fr; gap: 1rem; }
+    .woods-about__title { font-size: 1.5rem; margin-bottom: 1.2rem; }
+    .woods-about__desc { font-size: 0.88rem; line-height: 1.6; }
 
-    .woods-cta__title { font-size: 1.4rem; }
-    .woods-cta .btn { width: 100%; justify-content: center; }
+    .woods-section-title { font-size: 1.5rem !important; margin-bottom: 2rem; }
+
+    .woods-cta { padding: 3.5rem 0; }
+    .woods-cta__title { font-size: 1.3rem !important; }
+    .woods-cta .btn { width: 100%; justify-content: center; padding: 0.9rem; }
 }

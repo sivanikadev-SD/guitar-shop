@@ -399,27 +399,28 @@
 }
 
 /* ============================================================
-   RESPONSIVE — 480px (Mobile)
+   RESPONSIVE — 360px (Mobile)
    ============================================================ */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .port-hero {
         padding: 70px 0 1.5rem;
     }
 
     .port-section-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem !important;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.4rem;
+        margin-bottom: 2rem;
     }
 
     .port-section-title::before,
     .port-section-title::after {
-        width: 40px;
+        width: 30px !important;
     }
 
     .port-grid {
         grid-template-columns: 1fr;
-        gap: 0.8rem;
+        gap: 1rem;
         width: 100%;
     }
 
@@ -432,13 +433,15 @@
 
     .port-filters {
         width: 100%;
+        gap: 0.3rem;
     }
 
     .port-filter-btn {
         flex: 1;
         text-align: center;
         font-size: 0.8rem;
-        padding: 0.6rem 0.5rem;
+        padding: 0.5rem;
+        border-radius: var(--radius-sm);
     }
 
     .port-test-grid {
@@ -451,16 +454,26 @@
 
     .port-test-card__img {
         width: 100%;
-        height: 300px; /* Increased height for better framing on mobile */
+        height: 250px;
         object-position: center top;
+    }
+
+    .port-test-card__content {
+        padding: 1.2rem;
+    }
+
+    .port-cta {
+        padding: 3.5rem 0;
     }
 
     .port-cta__desc {
         font-size: 0.95rem;
+        margin-bottom: 1.5rem;
     }
 
     .port-cta .btn-outline {
         width: 100%;
         justify-content: center;
+        padding: 0.9rem;
     }
 }

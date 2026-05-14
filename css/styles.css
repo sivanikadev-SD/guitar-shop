@@ -1274,6 +1274,14 @@ img {
 /* ==================================
    TIMELINE (Process)
    ================================== */
+.pricing-banner-section {
+    background: url('assets/hero_guitar.png');
+    background-position: center 30%;
+    background-size: cover;
+    position: relative;
+    margin-top: 4rem;
+}
+
 .timeline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -2678,7 +2686,7 @@ section, main, footer, header {
 }
 
 /* ── 480px and below ── */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .container {
         width: 100%;
         padding-left: 1rem;
@@ -2864,8 +2872,8 @@ section, main, footer, header {
 
     .container {
         width: 100%;
-        padding-left: 1.25rem; /* Increased from 0.875rem */
-        padding-right: 1.25rem; /* Increased from 0.875rem */
+        padding-left: 1.5rem; /* Increased for better side breathing room */
+        padding-right: 1.5rem;
     }
 
     h1 { font-size: 1.7rem; }
@@ -2901,15 +2909,20 @@ section, main, footer, header {
     .social-icons { gap: 0.6rem; }
     .social-icons a { width: 34px; height: 34px; font-size: 0.95rem; }
 
-    /* ── Section spacing ── */
-    .section-spacing { padding: 3rem 0; }
+    .section-spacing { padding: 3.5rem 1.5rem; }
     .section-title {
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important; /* Slightly larger for presence */
         flex-direction: column !important;
         gap: 0.4rem !important;
     }
     .section-title::before,
     .section-title::after { width: 30px !important; }
+
+    /* Force reset any horizontal padding that might touch edges */
+    .split-text, .split-layout, .srv-content, .about-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 
     /* ── Home hero ── */
     .home-hero__title { font-size: 1.7rem; }
@@ -3019,4 +3032,53 @@ section, main, footer, header {
     .port-section-title { font-size: 1.3rem !important; }
     .port-filters { gap: 0.4rem; flex-wrap: wrap; }
     .port-filter-btn { font-size: 0.8rem; padding: 0.4rem 0.7rem; }
+}
+
+.pricing-banner-section {
+    padding: 10rem 0;
+}
+
+.pricing-banner-card {
+    background: rgba(20, 10, 5, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 4rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .pricing-banner-section {
+        padding: 6rem 0;
+    }
+    .pricing-banner-card {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .pricing-banner-section {
+        padding: 4rem 0;
+    }
+    .pricing-banner-card {
+        padding: 2.5rem 1.25rem; /* Tighter padding for small screens */
+    }
+    .pricing-banner-card h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .pricing-banner-card p {
+        font-size: 1rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .pricing-banner-card .btn-large {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .reveal-up.is-visible{
+       transform: translateY(0);
+       padding: 1.5rem 2rem;
+       /* margin: 0 1rem; */
+    }
 }
