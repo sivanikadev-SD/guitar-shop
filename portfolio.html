@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,27 +19,31 @@
     <!-- Setup dark theme wrapper for the page -->
     <div class="port-page-wrapper">
         
-        <!-- =========== NAVBAR =========== -->
-        <header class="navbar" id="navbar" style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(17, 11, 8, 0.8);">
-            <div class="nav-container">
-                <a href="index.html" class="brand-logo text-white"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
-                <nav class="nav-links" id="navLinks">
-                    <a href="index.html">Home</a>
-                    <a href="home2.html">Home 2</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="woods.html">Woods</a>
-                    <a href="portfolio.html" class="active">Portfolio</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <div class="nav-actions">
-                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo"><i class="ph-fill ph-guitar"></i> Artisan Guitars</a>
+            <nav class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)">Home <i class="ph ph-caret-down"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="home2.html">Home 2</a>
+                    </div>
                 </div>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="woods.html">Woods</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu"><i class="ph ph-list"></i></button>
             </div>
-        </header>
+        </div>
+    </header>
 
         <main>
             <!-- =========== 1. HERO & FILTERS =========== -->
